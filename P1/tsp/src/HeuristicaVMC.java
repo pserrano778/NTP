@@ -1,4 +1,11 @@
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Heuristica del vecino mas cercano
@@ -34,6 +41,22 @@ public class HeuristicaVMC extends HeuristicaTSP{
    }
 
    /**
+    * Resuelve el TSP mediante vecino mas cercano y programación Funcional
+    */
+   @Override
+   public void resolverFuncional(Problema problema) {
+      this.problema = problema;
+
+      // Se crea el ArrayList de rutas
+      // Se recorre la dimensión del problema, creando una ruta por ciudad
+      ArrayList<Ruta> rutas = new ArrayList<>(IntStream.range(0, problema.obtenerDimension()).boxed()
+      .map(ciudad -> { Ruta rutaNueva = new Ruta(); rutaNueva.agregarCiudad(problema.obtenerCiudad(ciudad), 0);
+      completarRuta(rutaNueva);return rutaNueva;}).collect(Collectors.toList()));
+
+      seleccionarRutaFuncional(rutas);
+   }
+
+   /**
     * Completa la ruta agregando siempre la ciudad mas cercana
     * @param ruta
     */
@@ -54,7 +77,7 @@ public class HeuristicaVMC extends HeuristicaTSP{
       else{
          // determinar la ciudad mas cercana a la ultima ciudad
          // de la ruta
-         Ciudad masCercana = problema.obtenerMasCercana(ruta);
+         Ciudad masCercana = problema.obtenerMasCercanaFuncional(ruta);
 
          // se determina el coste de ir desde fin hasta masCercana
          double distancia = problema.obtenerDistancia(ruta.obtenerFin(),
@@ -79,5 +102,15 @@ public class HeuristicaVMC extends HeuristicaTSP{
             rutaOptima = rutas.get(i);
          }
       }
+   }
+
+   /**
+    * Selecciona de la coleccion la ruta de menor coste, mediante programación funcional
+    * @param rutas
+    */
+   private void seleccionarRutaFuncional(ArrayList<Ruta> rutas){
+      rutaOptima = rutas.stream()
+              .sorted(Comparator.comparing(Ruta::obtenerCoste))
+              .collect(Collectors.toList()).get(0);
    }
 }

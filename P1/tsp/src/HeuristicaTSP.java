@@ -26,6 +26,11 @@ public abstract  class HeuristicaTSP {
    public abstract void resolver(Problema problema);
 
    /**
+    * Metodo de resolucion Funcional
+    */
+   public abstract void resolverFuncional(Problema problema);
+
+   /**
     * Devuelve la ruta optima
     * @return
     */

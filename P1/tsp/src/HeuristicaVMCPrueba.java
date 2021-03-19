@@ -15,6 +15,14 @@ public class HeuristicaVMCPrueba {
       heuristica.resolver(problema);
 
       // se muestra la ruta optima
+      System.out.println("Imperativa");
+      System.out.println(heuristica.obtenerOptima());
+
+      // se resuelve
+      heuristica.resolverFuncional(problema);
+
+      // se muestra la ruta optima
+      System.out.println("Funcional");
       System.out.println(heuristica.obtenerOptima());
    }
 }

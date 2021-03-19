@@ -26,6 +26,16 @@ public class Ciudad {
    }
 
    /**
+    * Constructor de la clase para leer un array de String con los datos
+    * @param datos
+    */
+   public Ciudad(String[] datos){
+      this.etiqueta = datos[0];
+      x = Integer.parseInt(datos[1]);
+      y = Integer.parseInt(datos[2]);
+   }
+
+   /**
     * Devuelve el valor del dato mimebro x
     * @return
     */

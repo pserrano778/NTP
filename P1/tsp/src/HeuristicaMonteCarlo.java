@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Clase para heuristica MonteCarlo
@@ -49,6 +53,26 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
    }
 
    /**
+    * Metodo de resolucion a partir del problema, utilizando programación funcional
+    * @param problema
+    */
+   @Override
+   public void resolverFuncional(Problema problema) {
+      // se asigna el problema
+      this.problema = problema;
+
+      // asignar el numero de muestras a generar
+      muestras = problema.obtenerDimension() * 100;
+
+      // se genera el array de indices
+      indices = new ArrayList<>(IntStream.range(0, problema.obtenerDimension()).boxed().collect(Collectors.toList()));
+
+      // se generan las soluciones aleatorias, se ordenan en función del menor coste y se coge la primera
+      rutaOptima = IntStream.range(0, muestras).boxed().map(indice -> generarAleatoriaFuncional())
+              .sorted(Comparator.comparing(Ruta::obtenerCoste)).collect(Collectors.toList()).get(0);
+   }
+
+   /**
     * Metodo de generacion de rutas aleatorias
     * @return
     */
@@ -69,6 +93,40 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
          double distancia = problema.obtenerDistancia(previa, siguiente);
          resultado.agregarCiudad(siguiente, distancia);
       }
+
+      // se agrega el coste de cierre
+      Ciudad inicio = problema.obtenerCiudad(indices.get(0));
+      Ciudad fin = problema.obtenerCiudad(indices.get(indices.size()-1));
+      double distanciaCierre = problema.obtenerDistancia(inicio, fin);
+      resultado.agregarCoste(distanciaCierre);
+
+      // se devuelve el resultado
+      return resultado;
+   }
+
+   /**
+    * Metodo de generacion de rutas aleatorias, mediante programación funcional
+    * @return
+    */
+   private Ruta generarAleatoriaFuncional(){
+      Ruta resultado = new Ruta();
+
+      // se desordena el array de indices
+      Collections.shuffle(indices);
+
+      // se van agregando las ciudades en el orden en que
+      // aparecen en indices
+      resultado.agregarCiudad(problema.obtenerCiudad(indices.get(0)), 0);
+
+      // Expresión tipo consumidor para agregar una ciudad
+      Consumer<Integer> procesarCiudad = indice -> {
+         Ciudad previa = problema.obtenerCiudad(indices.get(indice-1));
+         Ciudad siguiente = problema.obtenerCiudad(indices.get(indice));
+         double distancia = problema.obtenerDistancia(previa, siguiente);
+         resultado.agregarCiudad(siguiente, distancia);};
+
+      // Recorremos todos los indices
+      IntStream.range(1, indices.size()).boxed().forEach(procesarCiudad);
 
       // se agrega el coste de cierre
       Ciudad inicio = problema.obtenerCiudad(indices.get(0));

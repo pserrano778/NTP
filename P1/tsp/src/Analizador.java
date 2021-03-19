@@ -33,6 +33,23 @@ public class Analizador {
    }
 
    /**
+    * metodo para producir el analisis de un problema, mediante programación funcional
+    * @param nombreFichero
+    * @return
+    */
+   public Ruta analizarFuncional(String nombreFichero){
+      // se crea el problema
+      Problema problema = new Problema("./data/" + nombreFichero);
+
+      // se analiza el problema: se delega la funcionalidad en el
+      // dato miembro heuristicaTSP
+      heuristicaTSP.resolverFuncional(problema);
+
+      // se devuelve la ruta optima
+      return heuristicaTSP.obtenerOptima();
+   }
+
+   /**
     * metodo main para pruebas
     * @param args
     */
@@ -51,14 +68,23 @@ public class Analizador {
       // se produce el analisis del problema
       Ruta rutaOptimaVMC = analizador.analizar(nombreArchivo);
 
+      // se produce el analisis del problema de forma funcional
+      Ruta rutaOptimaVMCFuncional = analizador.analizarFuncional(nombreArchivo);
+
       // cambiar la heuristica del analizador
       analizador.asignarHeuristica(heuristicaMonteC);
 
       // se resuelve con la nueva heuristica
       Ruta rutaOptimaMonteC = analizador.analizar(nombreArchivo);
 
+      // se resuelve con la nueva heuristica
+      Ruta rutaOptimaMonteCFuncional = analizador.analizarFuncional(nombreArchivo);
+
       // se visualiza la ruta
       Visualizador visualizador = new Visualizador(nombreArchivo, rutaOptimaVMC,
               rutaOptimaMonteC);
+
+      Visualizador visualizadorFuncional = new Visualizador(nombreArchivo, rutaOptimaVMCFuncional,
+              rutaOptimaMonteCFuncional);
    }
 }
