@@ -142,7 +142,6 @@ public class Problema {
       int indiceFin = ciudades.indexOf(fin);
 
       // buscar el indice con menor distancia de indiceFin
-      double distanciaMinima = Double.MAX_VALUE;
       int indice = 0;
 
       // Predicado
@@ -184,8 +183,10 @@ public class Problema {
       // la diagonal principal
 
       IntStream.range(0, ciudades.size())
-              .forEach(i -> IntStream.range(0, ciudades.size())
-              .forEach(j -> distancias[i][j] = Utilidades.calcularDistanciaEuclidea(ciudades.get(i), ciudades.get(j))));
+              .forEach(i -> IntStream.range(i+1, ciudades.size())
+              .forEach(j -> {distancias[i][j] =
+                      Utilidades.calcularDistanciaEuclidea(ciudades.get(i), ciudades.get(j));
+                      distancias[j][i] = distancias[i][j];}));
    }
 
    /**

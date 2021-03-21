@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 /**
  * Representa un recorrido sobre un conjunto
@@ -107,14 +108,48 @@ public class Ruta {
    }
 
    /**
-    * Devuelve cadena con contenido de la ruta
+    * Devuelve dos ArrayList con los valores de las coordenadas
+    * X e Y, mediante programación funcional
+    * @return
+    */
+   public ArrayList<ArrayList<Double>> obtenerCoordenadasFuncional(){
+      // se crea el array general
+      ArrayList<ArrayList<Double>> resultado = new ArrayList<>();
+
+      // se crean los arrays para X e Y
+      resultado.add(new ArrayList<Double>());
+      resultado.add(new ArrayList<Double>());
+
+      // se Obtienen las coordenadas de las ciudades
+      recorridas.stream().forEach(ciudad -> {resultado.get(0).add(ciudad.obtenerX());
+         resultado.get(1).add(ciudad.obtenerY());});
+
+      // devolver resultado
+      return resultado;
+   }
+
+   /**
+    * Devuelve cadena con contenido de la ruta, de forma imperativa
+    * @return
+    */
+   public String toStringImperativo(){
+      String salida = "Ruta: ";
+
+      for(int i=0; i < recorridas.size(); i++){
+         salida += recorridas.get(i).obtenerEtiqueta() + " ";
+      }
+      salida += "coste: " + coste + "\n";
+
+      return salida;
+   }
+
+   /**
+    * Devuelve cadena con contenido de la ruta, mediante programación funcional
     * @return
     */
    public String toString(){
       String salida = "Ruta: ";
-      for(int i=0; i < recorridas.size(); i++){
-         salida += recorridas.get(i).obtenerEtiqueta() + " ";
-      }
+      salida += recorridas.stream().map(Ciudad::obtenerEtiqueta).collect(Collectors.joining(" "));
       salida += "coste: " + coste + "\n";
 
       return salida;
