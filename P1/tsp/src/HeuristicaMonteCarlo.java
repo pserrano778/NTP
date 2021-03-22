@@ -13,12 +13,17 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
    /**
     * Dato miembro para guardar el numero de muestras
     */
-   private int muestras;
+   protected int muestras;
 
    /**
     * Dato miembro auxiliar para generar soluciones aleatorias
     */
-   private ArrayList<Integer> indices;
+   protected ArrayList<Integer> indices;
+
+   /**
+    * Dato miembro para almacenar al rutas que se han generado
+    */
+   protected ArrayList<Ruta> rutasGeneradas;
 
    /**
     * Metodo de resolucion a partir del problema
@@ -44,7 +49,7 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       // considerancion de las muestras indicadas
       for(int i=0; i < muestras; i++){
          Ruta aleatoria = generarAleatoria();
-
+         rutasGeneradas.add(aleatoria);
          // comprobar si hay que actualizar la optima
          if(rutaOptima.obtenerCoste() > aleatoria.obtenerCoste()){
             rutaOptima = aleatoria;
@@ -68,15 +73,16 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       indices = new ArrayList<>(IntStream.range(0, problema.obtenerDimension()).boxed().collect(Collectors.toList()));
 
       // se generan las soluciones aleatorias, se ordenan en función del menor coste y se coge la primera
-      rutaOptima = IntStream.range(0, muestras).boxed().map(indice -> generarAleatoriaFuncional())
-              .sorted(Comparator.comparing(Ruta::obtenerCoste)).collect(Collectors.toList()).get(0);
+      rutasGeneradas = generarRutasAleatorias();
+
+      rutaOptima = rutasGeneradas.get(0);
    }
 
    /**
     * Metodo de generacion de rutas aleatorias
     * @return
     */
-   private Ruta generarAleatoria(){
+   protected Ruta generarAleatoria(){
       Ruta resultado = new Ruta();
 
       // se desordena el array de indices
@@ -108,7 +114,7 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
     * Metodo de generacion de rutas aleatorias, mediante programación funcional
     * @return
     */
-   private Ruta generarAleatoriaFuncional(){
+   protected Ruta generarAleatoriaFuncional(){
       Ruta resultado = new Ruta();
 
       // se desordena el array de indices
@@ -136,5 +142,14 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
 
       // se devuelve el resultado
       return resultado;
+   }
+
+   /**
+    * Genera un array de rutas generadas de forma aleatoriap
+    * @return
+    */
+   private ArrayList<Ruta> generarRutasAleatorias(){
+      return new ArrayList<>(IntStream.range(0, muestras).boxed().map(indice -> generarAleatoriaFuncional())
+              .sorted(Comparator.comparing(Ruta::obtenerCoste)).collect(Collectors.toList()));
    }
 }
