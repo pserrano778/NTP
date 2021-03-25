@@ -34,6 +34,9 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       // se asigna el problema
       this.problema = problema;
 
+      // se inicializa el array de rutas
+      rutasGeneradas = new ArrayList<>();
+
       // asignar el numero de muestras a generar
       muestras = problema.obtenerDimension() * 100;
 
@@ -66,6 +69,9 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       // se asigna el problema
       this.problema = problema;
 
+      // se inicializa el array de rutas
+      rutasGeneradas = new ArrayList<>();
+
       // asignar el numero de muestras a generar
       muestras = problema.obtenerDimension() * 100;
 
@@ -86,7 +92,7 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       Ruta resultado = new Ruta();
 
       // se desordena el array de indices
-      Collections.shuffle(indices);
+      Collections.shuffle(indices, new Random(1));
 
       // se van agregando las ciudades en el orden en que
       // aparecen en indices
@@ -118,7 +124,7 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       Ruta resultado = new Ruta();
 
       // se desordena el array de indices
-      Collections.shuffle(indices);
+      Collections.shuffle(indices, new Random(1));
 
       // se van agregando las ciudades en el orden en que
       // aparecen en indices

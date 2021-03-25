@@ -58,6 +58,7 @@ public class Analizador {
       // se crea la heuristica
       HeuristicaVMC heuristicaVMC = new HeuristicaVMC();
       HeuristicaMonteCarlo heuristicaMonteC = new HeuristicaMonteCarlo();
+      HeuristicaIntercambio heuristicaIntercambio = new HeuristicaIntercambio();
 
       // se crea el analizador
       Analizador analizador = new Analizador();
@@ -86,5 +87,13 @@ public class Analizador {
 
       Visualizador visualizadorFuncional = new Visualizador(nombreArchivo, rutaOptimaVMCFuncional,
               rutaOptimaMonteCFuncional);
+
+      // cambiar la heuristica del analizador
+      analizador.asignarHeuristica(heuristicaIntercambio);
+
+      // se resuelve con la nueva heuristica
+      Ruta rutaOptimaIntercambio = analizador.analizar(nombreArchivo);
+
+      Visualizador visualizadorIntercambio = new Visualizador(nombreArchivo, rutaOptimaIntercambio);
    }
 }

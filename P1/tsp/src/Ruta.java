@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.stream.Collectors;
 
 /**
@@ -22,6 +23,15 @@ public class Ruta {
    public Ruta(){
       recorridas = new ArrayList<>();
       coste = 0;
+   }
+
+   /**
+    * Constructor de copia
+    * @param ruta
+    */
+   public Ruta(Ruta ruta) {
+      this.coste = ruta.coste;
+      this.recorridas = new ArrayList<>(ruta.recorridas);
    }
 
    /**
@@ -153,5 +163,34 @@ public class Ruta {
       salida += "coste: " + coste + "\n";
 
       return salida;
+   }
+
+   /**
+    * Método que permite intercambiar de lugar dos ciudades
+    * @param ciudad1
+    * @param ciudad2
+    */
+   public void cambiarDosCiudades(int ciudad1, int ciudad2){
+      Collections.swap(recorridas, ciudad1, ciudad2);
+   }
+
+   /**
+    * Método que devuelves las ciudades de la ruta
+    * @return
+    */
+   public Ciudad obtenerCiudadRuta(int indiceCiudad){
+      Ciudad ciudad = null;
+      if (indiceCiudad < recorridas.size()){
+         ciudad = recorridas.get(indiceCiudad);
+      }
+      return ciudad;
+   }
+
+   /**
+    * Método que permite cambiar el coste de la ruta
+    * @param coste
+    */
+   public void modificarCoste(double coste){
+      this.coste = coste;
    }
 }
