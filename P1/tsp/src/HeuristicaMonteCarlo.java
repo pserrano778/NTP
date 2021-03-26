@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Random;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -92,7 +91,7 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       Ruta resultado = new Ruta();
 
       // se desordena el array de indices
-      Collections.shuffle(indices, new Random(1));
+      Collections.shuffle(indices);
 
       // se van agregando las ciudades en el orden en que
       // aparecen en indices
@@ -124,7 +123,7 @@ public class HeuristicaMonteCarlo extends HeuristicaTSP{
       Ruta resultado = new Ruta();
 
       // se desordena el array de indices
-      Collections.shuffle(indices, new Random(1));
+      Collections.shuffle(indices);
 
       // se van agregando las ciudades en el orden en que
       // aparecen en indices
