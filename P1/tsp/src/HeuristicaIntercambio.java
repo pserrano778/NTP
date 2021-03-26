@@ -1,14 +1,26 @@
 import java.security.SecureRandom;
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
 
+    /**
+     * Atributo para almacenar las veces que comienza una ruta por cada ciudad
+     */
     private TreeMap<String, Long> rutasPorCiudad;
+
+    /**
+     * Atributo para contar las veces que un intercambio ha empeorado una ruta
+     */
+    private int intercambiosPeores;
+
+    /**
+     * Atributo para definir el máximo número de veces que puede empeorar una ruta
+     */
+    private int maxIntercambiosPeores;
 
     /**
      * Función lambda que permite intercambiar ciudades de una ruta hasta obtener un coste menor
@@ -35,12 +47,18 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
             if(costeNuevaRuta < ruta.obtenerCoste()){
                 rutasGeneradas.set(rutasGeneradas.indexOf(ruta), copiaRuta);
                 ruta = copiaRuta;
-
-                // Si mejora con respecto a la media, continuamos los intercambios
-                if(costeNuevaRuta < calcularMediaCosteRutas()){
-                    intercambiaCiudades.accept(ruta);
-                }
             }
+            else {
+                intercambiosPeores++;
+            }
+
+            // Si mejora con respecto a la media, continuamos los intercambios
+            if(costeNuevaRuta < calcularMediaCosteRutas() && intercambiosPeores < maxIntercambiosPeores){
+                intercambiaCiudades.accept(ruta);
+            }
+            
+            //Se termina de procesar la ruta y se reinicia el contador de veces que ha empeorado su coste
+            intercambiosPeores = 0;
         };
     }
 
@@ -50,10 +68,17 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
      */
     @Override
     public void resolver(Problema problema) {
+        // Se genera una lista de rutas por medio de la heurística Monte Carlo
         super.resolver(problema);
+
         double mediaCosteRutas = calcularMediaCosteRutas();
 
+        // Se define el número máximo de fallos según la dimensión del problema
+        maxIntercambiosPeores = problema.obtenerDimension();
+                
         for (int i=0; i<rutasGeneradas.size(); i++){
+            intercambiosPeores = 0;
+
             double costeNuevaRuta = Double.MAX_VALUE;
             do{
                 // Se copia la ruta
@@ -75,8 +100,16 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
                 if(costeNuevaRuta < rutasGeneradas.get(i).obtenerCoste()){
                     rutasGeneradas.set(i, copiaRuta);
                 }
-            }while(costeNuevaRuta < mediaCosteRutas); // Realizamos intercambios mientras sea mejor que la media
+                else {
+                    intercambiosPeores++;
+                }
+            // Realizamos intercambios mientras sea mejor que la media
+            }while(costeNuevaRuta < mediaCosteRutas && intercambiosPeores < maxIntercambiosPeores);
         }
+        // Agrupamos por ciudad
+        agruparRutasPorCiudad();
+
+        // Asignamos la ruta optima
         asignarOptima();
     }
 
@@ -86,8 +119,20 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
      */
     @Override
     public void resolverFuncional(Problema problema) {
+        // Se genera una lista de rutas por medio de la heurística Monte Carlo
         super.resolver(problema);
+
+        // Se define el número máximo de fallos según la dimensión del problema
+        maxIntercambiosPeores = problema.obtenerDimension();
+
+        intercambiosPeores = 0;
+        
         rutasGeneradas.stream().forEach(intercambiaCiudades);
+
+        // Agrupamos por ciudad
+        agruparRutasPorCiudad();
+
+        // Asignamos la ruta optima
         asignarOptima();
     }
 
@@ -112,10 +157,9 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
 
     /**
      * Agrupa las rutas por su ciudad de inicio, haciendo uso de programación funcional
-     * @param rutas
      */
-    public void agruparRutasPorCiudad(ArrayList<Ruta> rutas){
-        rutasPorCiudad = rutas.stream().map(Ruta::obtenerInicio)
+    public void agruparRutasPorCiudad(){
+        rutasPorCiudad = rutasGeneradas.stream().map(Ruta::obtenerInicio)
                 .collect(Collectors.groupingBy(Ciudad::obtenerEtiqueta, TreeMap::new, Collectors.counting()));
     }
 
@@ -140,7 +184,6 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
 
     private void asignarOptima(){
         rutaOptima = rutasGeneradas.stream().sorted(Comparator.comparing(Ruta::obtenerCoste)).collect(Collectors.toList()).get(0);
-        System.out.println("COSTE: " + rutaOptima.obtenerCoste());
     }
 
     /**

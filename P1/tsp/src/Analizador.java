@@ -54,7 +54,7 @@ public class Analizador {
     * @param args
     */
    public static void main(String args[]){
-      String nombreArchivo = "eil101.tsp";
+      String nombreArchivo = "pr1002.tsp";
       // se crea la heuristica
       HeuristicaVMC heuristicaVMC = new HeuristicaVMC();
       HeuristicaMonteCarlo heuristicaMonteC = new HeuristicaMonteCarlo();
@@ -89,13 +89,33 @@ public class Analizador {
 
       Ruta rutaOptimaIntercambioFuncional = analizador.analizarFuncional(nombreArchivo);
 
-      // se visualiza la ruta
-      Visualizador visualizador = new Visualizador(nombreArchivo, rutaOptimaVMC,
+      // Prueba de la funcionalidad que permite crear un diccionario con la etiqueta de la ciudad,
+      // y las veces que se inicia una ruta en ella
+      System.out.println("Diccionario de ciudad de inicio (heurística de intercambio)");
+      System.out.println(heuristicaIntercambio.obtenerRutasAgrupadasPorCiudad());
+
+      // Prueba de la funcionalidad que permite filtrar las rutas que tienen un coste entre un rango
+      System.out.println("Funcionalidad de filtrado de rutas entre rango (heurística de intercambio)");
+      System.out.println(heuristicaIntercambio.filtrasRutasPorCosteEnRango(1000.0, 2000.0));
+
+      // Se muestran todos los costes de las rutas optimas obtenidas
+      System.out.println("Coste con heuristica Vecino Mas Cercano - Imperativa: " + rutaOptimaVMC.obtenerCoste());
+      System.out.println("Coste con heuristica Vecino Mas Cercano - Funcional: " + rutaOptimaVMCFuncional.obtenerCoste());
+      System.out.println("Coste con heuristica Monte Carlo - Imperativa: " + rutaOptimaMonteC.obtenerCoste());
+      System.out.println("Coste con heuristica Monte Carlo - Funcional: " + rutaOptimaMonteCFuncional.obtenerCoste());
+      System.out.println("Coste con heuristica Intercambio - Imperativa: " + rutaOptimaIntercambio.obtenerCoste());
+      System.out.println("Coste con heuristica Intercambio - Funcional: " + rutaOptimaIntercambioFuncional.obtenerCoste());
+
+      // se visualizan las rutas
+      Visualizador visualizador = new Visualizador(nombreArchivo + " - Heuristicas VMC y Monte Carlo (Imperativa)"
+              , rutaOptimaVMC,
               rutaOptimaMonteC);
 
-      Visualizador visualizadorFuncional = new Visualizador(nombreArchivo, rutaOptimaVMCFuncional,
+      Visualizador visualizadorFuncional = new Visualizador(nombreArchivo + " - Heuristicas VMC y Monte Carlo (Funcional)"
+              , rutaOptimaVMCFuncional,
               rutaOptimaMonteCFuncional);
 
-      Visualizador visualizadorIntercambio = new Visualizador(nombreArchivo, rutaOptimaIntercambio, rutaOptimaIntercambioFuncional);
+      Visualizador visualizadorIntercambio = new Visualizador(nombreArchivo + " - Heuristica Intercambio (Imperativa y Funcional)"
+              , rutaOptimaIntercambio, rutaOptimaIntercambioFuncional);
    }
 }
