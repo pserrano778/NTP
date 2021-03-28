@@ -75,7 +75,12 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
 
         // Se define el número máximo de fallos según la dimensión del problema
         maxIntercambiosPeores = problema.obtenerDimension();
-                
+
+        // Limitamos el numero de intercambios para problemas grandes
+        if (maxIntercambiosPeores > 150){
+            maxIntercambiosPeores = 150;
+        }
+
         for (int i=0; i<rutasGeneradas.size(); i++){
             intercambiosPeores = 0;
 
@@ -124,6 +129,11 @@ public class HeuristicaIntercambio extends HeuristicaMonteCarlo{
 
         // Se define el número máximo de fallos según la dimensión del problema
         maxIntercambiosPeores = problema.obtenerDimension();
+
+        // Limitamos el numero de intercambios para problemas grandes
+        if (maxIntercambiosPeores > 150){
+            maxIntercambiosPeores = 150;
+        }
 
         intercambiosPeores = 0;
         
