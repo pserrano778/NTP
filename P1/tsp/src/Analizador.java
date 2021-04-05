@@ -54,7 +54,7 @@ public class Analizador {
     * @param args
     */
    public static void main(String args[]){
-      String nombreArchivo = "berlin52.tsp";
+      String nombreArchivo = "small10.tsp";
       // se crea la heuristica
       HeuristicaVMC heuristicaVMC = new HeuristicaVMC();
       HeuristicaMonteCarlo heuristicaMonteC = new HeuristicaMonteCarlo();
