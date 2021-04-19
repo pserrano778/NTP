@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68e85c12-63c1-433b-90a6-926ab3e83878" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1rF5DoMjOFIWbCyAUR29atn1BrP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Application.Ejercicio1v2">
+    <configuration name="Ejercicio1v1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio1.Ejercicio1v1" />
+      <module name="funciones2c" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejercicio1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio1v1Benchmark" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio1.Ejercicio1v1Benchmark" />
+      <module name="funciones2c" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejercicio1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio1v1Check" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio1.Ejercicio1v1Check" />
+      <module name="funciones2c" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejercicio1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio1v2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio1.Ejercicio1v2" />
+      <module name="funciones2c" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ejercicio1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio1v1Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="funciones2c" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="testClassPath" value="ejercicio1.Ejercicio1v1Test" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\funciones2c" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ejercicio1v2" />
+        <item itemvalue="Application.Ejercicio1v1Benchmark" />
+        <item itemvalue="ScalaTest.Ejercicio1v1Test" />
+        <item itemvalue="Application.Ejercicio1v1Check" />
+        <item itemvalue="Application.Ejercicio1v1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68e85c12-63c1-433b-90a6-926ab3e83878" name="Default Changelist" comment="" />
+      <created>1618558882470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618558882470</updated>
+      <workItem from="1618558883651" duration="3058000" />
+      <workItem from="1618561981671" duration="4346000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

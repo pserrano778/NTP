@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36fa4839-27fb-4247-9e68-04b5e5239ba6" name="Default Changelist" comment="" />
+    <list default="true" id="e0abeab6-fef6-4a3f-bf8b-0ccbf1ed3f16" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,20 +18,13 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Scala Worksheet" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1qvaYfGxNOfhMfS87TFj0JJgfl8" />
+  <component name="ProjectId" id="1rFNGp0EqYbGHr2gtTNik8WIR3q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,30 +36,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration name="FuncionesAnidadas" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="FuncionesAnidadas" />
-      <module name="funciones" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.FuncionesAnidadas" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="36fa4839-27fb-4247-9e68-04b5e5239ba6" name="Default Changelist" comment="" />
-      <created>1617962567748</created>
+      <changelist id="e0abeab6-fef6-4a3f-bf8b-0ccbf1ed3f16" name="Default Changelist" comment="" />
+      <created>1618567786169</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1617962567748</updated>
-      <workItem from="1617962568900" duration="2344000" />
-      <workItem from="1618558641913" duration="238000" />
+      <updated>1618567786169</updated>
+      <workItem from="1618567787343" duration="170000" />
     </task>
     <servers />
   </component>
@@ -83,6 +61,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
