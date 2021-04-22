@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.scalactic:scalactic_0.17:3.2.0-M2" type="repository">
+    <properties maven-id="org.scalactic:scalactic_0.17:3.2.0-M2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scalactic/scalactic_0.17/3.2.0-M2/scalactic_0.17-3.2.0-M2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/ch/epfl/lamp/dotty-library_0.17/0.17.0-RC1/dotty-library_0.17-0.17.0-RC1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

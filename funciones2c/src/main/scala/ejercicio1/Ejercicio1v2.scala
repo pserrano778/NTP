@@ -16,7 +16,7 @@ object Ejercicio1v2 extends App{
     def sumatorioTR(funcion : Int => Int, inf : Int, sup : Int) : Int = {
         @annotation.tailrec
         def go(inf : Int, acum : Int) : Int = {
-            if (inf > sup) acum
+            if (inf == ) acum
             else go(inf+1, acum + funcion(inf))
         }
 

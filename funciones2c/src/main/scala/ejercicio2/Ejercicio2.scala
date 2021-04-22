@@ -12,5 +12,5 @@ object Ejercicio2 extends App{
 
     val array1 : Array[Int] = Array(1, 5, 35, 98, 123, 215)
     var res = ordenado(array1)(_ < _)
-    var res = ordenado(array1)(_ > _)
+    res = ordenado(array1)(_ > _)
 }

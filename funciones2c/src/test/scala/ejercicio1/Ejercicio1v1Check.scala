@@ -16,7 +16,7 @@ object Ejercicio1v1Check extends Properties("Prueba de ejercicio1 versión 1"){
 
         // tambien se puede hacer con Gen.oneOf(SUP, SUP+50) Coge uno de los 2
     } yield(inferior, superior)
-
+prope
     property("Igualdad de metodos no TR y TR") = {
         forAll(intervalos) { intervalo => {
             println("inf: " + intervalo._1, " sup: " + intervalo._2)

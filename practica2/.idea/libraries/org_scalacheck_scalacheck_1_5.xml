@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.scalacheck:scalacheck:1.5" type="repository">
+    <properties maven-id="org.scalacheck:scalacheck:1.5" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scalacheck/scalacheck/1.5/scalacheck-1.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
