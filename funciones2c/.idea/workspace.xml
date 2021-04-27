@@ -97,19 +97,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Ejercicio1v1Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="funciones2c" />
       <option name="allowRunningInParallel" value="false" />
@@ -151,6 +138,8 @@
       <workItem from="1619457975693" duration="2311000" />
       <workItem from="1619480601864" duration="461000" />
       <workItem from="1619481964538" duration="49000" />
+      <workItem from="1619548164465" duration="455000" />
+      <workItem from="1619549005330" duration="4000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,11 @@
 package ejercicio5
 
-import ejercicio5.BusquedaBinariaGenerica.{array1, busquedaBinaria}
+import ejercicio5.BusquedaSaltosGenerica.busquedaSaltosGenerica
 import org.scalacheck.Prop.forAll
-import org.scalacheck.rng.Seed.random
 import org.scalacheck.{Gen, Properties}
 
 
-object BusquedaBinariaGenericaCheck extends Properties("Prueba de Practica 2 Ejercicio 5"){
+object BusquedaSaltosGenericaCheck extends Properties("Prueba de Practica 2 Ejercicio 5"){
 
     val MAXIMALONGITUD = 20
 
@@ -25,10 +24,10 @@ object BusquedaBinariaGenericaCheck extends Properties("Prueba de Practica 2 Eje
 
             // Se realiza una búsqueda de todos los elementos del array actual
             for(i <- 0 until arrayOrdenado.length) {
-                val resultadoBusquedaBinaria = busquedaBinaria(arrayOrdenado, arrayOrdenado(i)) (_ > _)
+                val resultadoBusquedaSaltos = busquedaSaltosGenerica(arrayOrdenado, arrayOrdenado(i)) (_ > _)
 
                 // Si en algún momento no es correcto
-                if(i != resultadoBusquedaBinaria && arrayOrdenado(i) != arrayOrdenado(resultadoBusquedaBinaria)) {
+                if(i != resultadoBusquedaSaltos && arrayOrdenado(i) != arrayOrdenado(resultadoBusquedaSaltos)) {
                     valido = false;
                 }
             }

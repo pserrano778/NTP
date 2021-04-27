@@ -14,7 +14,7 @@ object BusquedaBinariaGenerica extends App{
     def busquedaBinaria[A](coleccion : Array[A], aBuscar: A)(criterio : (A,A) => Boolean) : Int = {
         //Funcion recursiva interna
         @annotation.tailrec
-        def go(coleccion : Array[A], aBuscar: A, inicio : Int, fin: Int) : Int = {
+        def go(inicio : Int, fin: Int) : Int = {
             // Calculamos el indice intermedio
             val mitad = (inicio + fin) / 2
 
@@ -22,19 +22,15 @@ object BusquedaBinariaGenerica extends App{
             if (coleccion(mitad) == aBuscar) mitad
 
             // Si es mayor, se busca en la primera mitad de la coleccion actual
-            else if (criterio(coleccion(mitad), aBuscar)) go(coleccion, aBuscar, inicio, mitad - 1)
+            else if (criterio(coleccion(mitad), aBuscar)) go(inicio, mitad - 1)
 
             // Si es menor, se busca en la segundad mitad de la coleccion actual
-            else go(coleccion, aBuscar, mitad + 1, fin)
+            else go(mitad + 1, fin)
         }
 
         //Primera llamada con toda la coleccion
-        go(coleccion, aBuscar, 0, coleccion.size-1)
+        go( 0, coleccion.size-1)
     }
-
-    val array12 : Array[Int] = Array(-1, 5)
-    var res2 = busquedaBinaria(array12, -1) (_ > _)
-    println(res2)
 
     val array1 : Array[Int] = Array(1, 5, 35, 98, 123, 215)
     var res = busquedaBinaria(array1, 1) (_ > _)
