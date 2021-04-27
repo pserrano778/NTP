@@ -1,7 +1,7 @@
 package ejercicio2
 
 object Ejercicio2 extends App{
-    def ordenado[A](as : Array[A])(criterio: (A, A) => Boolean) : Boolean = {
+    def ordenado[A](as : Array[A], criterio: (A, A) => Boolean) : Boolean = {
         def go(indice : Int) : Boolean = {
             if (indice == as.length - 2) criterio(as(indice), as(indice+1))
             else if(!criterio(as(indice), as(indice+1))) false

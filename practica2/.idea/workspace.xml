@@ -52,13 +52,18 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="build.tools" />
   </component>
-  <component name="RunManager" selected="Application.SeriesRecurrentes">
-    <configuration name="Ejercicio1Check" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio1.Ejercicio1Check" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ejercicio2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BusquedaBinariaGenericaCheck">
+    <configuration name="BusquedaBinariaGenerica" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio5.BusquedaBinariaGenerica" />
       <module name="practica2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejercicio1.*" />
+          <option name="PATTERN" value="ejercicio5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeriesRecurrentes" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio2.SeriesRecurrentes" />
+    <configuration name="BusquedaBinariaGenericaCheck" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio5.BusquedaBinariaGenericaCheck" />
       <module name="practica2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejercicio2.*" />
+          <option name="PATTERN" value="ejercicio5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +84,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrianguloPascal" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio1.TrianguloPascal" />
+    <configuration name="ContadorPosiblesCambiosMoneda" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio4.ContadorPosiblesCambiosMoneda" />
       <module name="practica2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejercicio1.*" />
+          <option name="PATTERN" value="ejercicio4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,25 +97,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ejercicio1Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="Ejercicio3Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="practica2" />
       <option name="allowRunningInParallel" value="false" />
       <option name="selectedOptions">
         <list />
       </option>
       <option name="testKind" value="Class" />
-      <option name="testClassPath" value="ejercicio1.Ejercicio1Test" />
+      <option name="testClassPath" value="ejercicio3.Ejercicio3Test" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio4Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica2" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="testClassPath" value="ejercicio4.Ejercicio4Test" />
       <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,10 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SeriesRecurrentes" />
-        <item itemvalue="ScalaTest.Ejercicio1Test" />
-        <item itemvalue="Application.Ejercicio1Check" />
-        <item itemvalue="Application.TrianguloPascal" />
+        <item itemvalue="Application.BusquedaBinariaGenericaCheck" />
+        <item itemvalue="Application.BusquedaBinariaGenerica" />
+        <item itemvalue="Application.ContadorPosiblesCambiosMoneda" />
+        <item itemvalue="ScalaTest.Ejercicio4Test" />
+        <item itemvalue="ScalaTest.Ejercicio3Test" />
       </list>
     </recent_temporary>
   </component>
@@ -136,6 +157,10 @@
       <workItem from="1618567787343" duration="170000" />
       <workItem from="1618903885004" duration="9000" />
       <workItem from="1619096423871" duration="17066000" />
+      <workItem from="1619169379643" duration="24558000" />
+      <workItem from="1619441389062" duration="594000" />
+      <workItem from="1619452180725" duration="8788000" />
+      <workItem from="1619479243023" duration="5255000" />
     </task>
     <servers />
   </component>

@@ -5,8 +5,8 @@ import ejercicio1.TrianguloPascal.calcularValorTrianguloPascal
 import org.scalacheck.Prop.forAll
 import org.scalacheck.{Gen, Properties}
 
-object Ejercicio1Check extends Properties("Prueba dePractica 2 Ejercicio1"){
-    val MAXIMO = 11
+object Ejercicio1Check extends Properties("Prueba de Practica 2 Ejercicio 1"){
+    val MAXIMO = 13
 
     // Se generan los valores de fila y columna para los bordes
     val coordenadasExtremos = for {

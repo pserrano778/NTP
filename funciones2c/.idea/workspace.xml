@@ -39,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scala" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -97,13 +97,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,6 +144,13 @@
       <workItem from="1618558883651" duration="3058000" />
       <workItem from="1618561981671" duration="4346000" />
       <workItem from="1619109013345" duration="10056000" />
+      <workItem from="1619167791632" duration="5979000" />
+      <workItem from="1619202375360" duration="664000" />
+      <workItem from="1619212214020" duration="20000" />
+      <workItem from="1619216137770" duration="772000" />
+      <workItem from="1619457975693" duration="2311000" />
+      <workItem from="1619480601864" duration="461000" />
+      <workItem from="1619481964538" duration="49000" />
     </task>
     <servers />
   </component>

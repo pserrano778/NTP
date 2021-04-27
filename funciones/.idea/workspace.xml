@@ -42,6 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vision-2" />
   </component>
   <component name="RunManager">
     <configuration name="FuncionesAnidadas" type="Application" factoryName="Application" temporary="true">
@@ -68,6 +69,9 @@
       <workItem from="1617962568900" duration="2344000" />
       <workItem from="1618558641913" duration="238000" />
       <workItem from="1619111991451" duration="9000" />
+      <workItem from="1619174482234" duration="20000" />
+      <workItem from="1619211693865" duration="3000" />
+      <workItem from="1619212236645" duration="221000" />
     </task>
     <servers />
   </component>

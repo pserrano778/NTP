@@ -8,9 +8,9 @@ object TrianguloPascal {
      * @param columna
      * @return
      */
-    def calcularValorTrianguloPascal(fila: Int, columna: Int): Int = {
+    def calcularValorTrianguloPascal(fila: Int, columna: Int): BigInt = {
         @annotation.tailrec
-        def go(num: Int, acum: Int) : Int = {
+        def go(num: BigInt, acum: BigInt) : BigInt = {
             if (num == 1 || num == 0) acum
             else go(num - 1, acum*num)
         }
