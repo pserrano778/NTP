@@ -8,30 +8,29 @@ object SeriesRecurrentes extends App {
     /**
      * funcion generica de de series Recurrentes mediante recursividad TR
      * @param funcion
-     * @param termino1
-     * @param termino2
+     * @param primerTermino
+     * @param segundoTermino
      * @param terminoI
      * @return
      */
-    def seriesRecurrentes(funcion : (Int, Int) => Int, termino1 : Int, termino2 : Int, terminoI : Int) : Array[Int] = {
+    def seriesRecurrentes(funcion : (Int, Int) => Int, primerTermino : Int, segundoTermino : Int, terminoI : Int) : Int = {
         @annotation.tailrec
-        def go(restantes : Int, arrayAcum : ArrayBuffer[Int]) : ArrayBuffer[Int] = {
+        def go(termino : Int, acum : Int, anterior : Int) : Int = {
+            // Cuando hemos lleago al elemento deseado, devolvemos acum
+            if (termino == 0) acum
 
-            // Si llegamos a 0, devolvemos el la secuencia
-            if (restantes == 0) arrayAcum
+            // Primer Termino (no tiene anterior)
+            else if (termino == terminoI) go(termino-1, primerTermino, 0)
 
-            // Primer termino
-            else if (restantes == terminoI) go(restantes-1, arrayAcum+=termino1)
+            // Segundo Termino (el anterior es el primer termino)
+            else if (termino == terminoI-1) go(termino-1, segundoTermino, primerTermino)
 
-            // Segundo termino
-            else if (restantes == terminoI-1) go(restantes-1, arrayAcum+=termino2)
-
-            // Calculamos en base a los valores anteriores
-            else go (restantes-1, arrayAcum+=funcion(arrayAcum.last, arrayAcum(arrayAcum.length-2)))
+            // Calculo del termino I+1, a partir del termino actual, y de su anterior.
+            // El anterior al termino I+1 es el termino actual (acum)
+            else go (termino-1, funcion(acum, anterior), acum)
         }
-
-        //Devolvemos en forma de array
-        Array.from(go (terminoI, ArrayBuffer[Int]()))
+        // Primera llamada
+        go (terminoI, 0, 0)
     }
 
      /**
@@ -82,40 +81,40 @@ object SeriesRecurrentes extends App {
      * un valor de la serie de forma recursiva
      * @return
      */
-    def serieFibonacci : Int => Array[Int] = seriesRecurrentes(fibonacci, 0, 1, _)
+    def serieFibonacci : Int => Int = seriesRecurrentes(fibonacci, 0, 1, _)
 
     /**
      * Funcion que define la relación de Lucas y los dos primeros valores, y permite calcular
      * un valor de la serie de forma recursiva
      * @return
      */
-    def serieLucas : Int => Array[Int] = seriesRecurrentes(lucas, 2, 1, _)
+    def serieLucas : Int => Int = seriesRecurrentes(lucas, 2, 1, _)
 
     /**
      * Funcion que define la relación de Pell y los dos primeros valores, y permite calcular
      * un valor de la serie de forma recursiva
      * @return
      */
-    def seriePell : Int => Array[Int] = seriesRecurrentes(pell, 2, 6, _)
+    def seriePell : Int => Int = seriesRecurrentes(pell, 2, 6, _)
 
     /**
      * Funcion que define la relación de Pell-Lucas y los dos primeros valores, y permite calcular
      * un valor de la serie de forma recursiva
      * @return
      */
-    def seriePellLucas : Int => Array[Int] = seriesRecurrentes(pellLucas, 2, 2, _)
+    def seriePellLucas : Int => Int = seriesRecurrentes(pellLucas, 2, 2, _)
 
     /**
      * Funcion que define la relación de Jacobsthal y los dos primeros valores, y permite calcular
      * un valor de la serie de forma recursiva
      * @return
      */
-    def serieJacobsthal : Int => Array[Int] = seriesRecurrentes(jacobsthal, 0, 1, _)
+    def serieJacobsthal : Int => Int = seriesRecurrentes(jacobsthal, 0, 1, _)
 
-
-    println("Finonacci (15): " + serieFibonacci(15).toList)
-    println("Lucas (15): " + serieLucas(15).toList)
-    println("Pell (15): " + seriePell(15).toList)
-    println("Pell-Lucas (15): " + seriePellLucas(15).toList)
-    println("Jacobsthal (15): " + serieJacobsthal(15).toList)
+    println("Finonacci (5): " + serieFibonacci(5))
+    println("Finonacci (6): " + serieFibonacci(6))
+    println("Lucas (5): " + serieLucas(5))
+    println("Pell (5): " + seriePell(5))
+    println("Pell-Lucas (5): " + seriePellLucas(5))
+    println("Jacobsthal (5): " + serieJacobsthal(5))
 }

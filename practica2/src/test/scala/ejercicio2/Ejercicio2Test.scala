@@ -20,29 +20,53 @@ class Ejercicio2Test extends AnyFunSuite{
     val jacobsthal = ejercicio2.SeriesRecurrentes.serieJacobsthal(_)
 
 
-    // Prueba serie Fibonacci: se calcula la serie hasta el termino 15
-    test("Serie de Fibonacci hasta termino 15") {
-        assert(fibonacci(15) === List(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377))
+    // Prueba serie Fibonacci: primer termino
+    test("Serie de Fibonacci - termino 1") {
+        assert(fibonacci(1) === 0)
     }
 
-    // Prueba serie Lucas: se calcula la serie hasta el termino 15
-    test("Serie de Lucas hasta termino 15") {
-        assert(lucas(15) === List(2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521, 843))
+    // Prueba serie Fibonacci: segundo termino
+    test("Serie de Fibonacci - termino 2") {
+        assert(fibonacci(2) === 1)
     }
 
-    // Prueba serie Pell: se calcula la serie hasta el termino 15
-    test("Serie de Pell hasta termino 15") {
-        assert(pell(15) === List(2, 6, 14, 34, 82, 198, 478, 1154, 2786, 6726, 16238, 39202, 94642, 228486, 551614))
+    // Prueba serie Lucas: primer termino
+    test("Serie de Lucas - termino 1") {
+        assert(lucas(1) === 2)
     }
 
-    // Prueba serie Pell-Lucas: se calcula la serie hasta el termino 15
-    test("Serie de Pell-Lucas hasta termino 15") {
-        assert(pellLucas(15) === List(2, 2, 6, 14, 34, 82, 198, 478, 1154, 2786, 6726, 16238, 39202, 94642, 228486))
+    // Prueba serie Lucas: segundo termino
+    test("Serie de Lucas - termino 2") {
+        assert(lucas(2) === 1)
     }
 
-    // Prueba serie Jacobsthal: se calcula la serie hasta el termino 15
-    test("Serie de Jacobsthal hasta termino 15") {
-        assert(jacobsthal(15) === List(0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341, 683, 1365, 2731, 5461))
+    // Prueba serie Pell: primer termino
+    test("Serie de Pell - termino 1") {
+        assert(pell(1) === 2)
     }
 
+    // Prueba serie Pell: segundo termino
+    test("Serie de Pell - termino 2") {
+        assert(pell(2) === 6)
+    }
+
+    // Prueba serie Pell-Lucas: primer termino
+    test("Serie de Pell-Lucas - termino 1") {
+        assert(pellLucas(1) === 2)
+    }
+
+    // Prueba serie Pell-Lucas: segundo termino
+    test("Serie de Pell-Lucas - termino 2") {
+        assert(pellLucas(2) === 2)
+    }
+
+    // Prueba serie Jacobsthal: primer termino
+    test("Serie de Jacobsthal - termino 1") {
+        assert(jacobsthal(1) === 0)
+    }
+
+    // Prueba serie Jacobsthal: segundo termino
+    test("Serie de Jacobsthal - termino 2") {
+        assert(jacobsthal(2) === 1)
+    }
 }

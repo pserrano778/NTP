@@ -54,17 +54,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ejercicio5" />
       <recent name="ejercicio2" />
+      <recent name="ejercicio5" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.Ejercicio4Test">
-    <configuration name="BusquedaBinariaGenericaCheck" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio5.BusquedaBinariaGenericaCheck" />
+  <component name="RunManager" selected="Application.Ejercicio2Check">
+    <configuration name="Ejercicio2Check" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio2.Ejercicio2Check" />
       <module name="practica2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejercicio5.*" />
+          <option name="PATTERN" value="ejercicio2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,38 +72,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BusquedaSaltosGenericaCheck" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio5.BusquedaSaltosGenericaCheck" />
+    <configuration name="SeriesRecurrentes" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ejercicio2.SeriesRecurrentes" />
       <module name="practica2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ejercicio5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContadorPosiblesCambiosMoneda" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio4.ContadorPosiblesCambiosMoneda" />
-      <module name="practica2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ejercicio4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ejercicio5Benchmark" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ejercicio5.Ejercicio5Benchmark" />
-      <module name="practica2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ejercicio5.*" />
+          <option name="PATTERN" value="ejercicio2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,6 +92,33 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio2Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica2" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="testClassPath" value="ejercicio2.Ejercicio2Test" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ejercicio2Test.Serie de Fibonacci - termino 15" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica2" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="ejercicio2.Ejercicio2Test" />
+      <option name="testName" value="Serie de Fibonacci - termino 15" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ejercicio2Check" />
+        <item itemvalue="ScalaTest.Ejercicio2Test" />
+        <item itemvalue="ScalaTest.Ejercicio2Test.Serie de Fibonacci - termino 15" />
+        <item itemvalue="Application.SeriesRecurrentes" />
         <item itemvalue="ScalaTest.Ejercicio4Test" />
-        <item itemvalue="Application.ContadorPosiblesCambiosMoneda" />
-        <item itemvalue="Application.Ejercicio5Benchmark" />
-        <item itemvalue="Application.BusquedaBinariaGenericaCheck" />
-        <item itemvalue="Application.BusquedaSaltosGenericaCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -165,6 +166,8 @@
       <workItem from="1619723703455" duration="272000" />
       <workItem from="1619767892157" duration="581000" />
       <workItem from="1619769016861" duration="6484000" />
+      <workItem from="1619783454938" duration="4826000" />
+      <workItem from="1619797675986" duration="3298000" />
     </task>
     <servers />
   </component>
