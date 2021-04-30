@@ -11,7 +11,7 @@ object BusquedaBinariaGenerica extends App{
      * @tparam A
      * @return
      */
-    def busquedaBinaria[A](coleccion : Array[A], aBuscar: A)(criterio : (A,A) => Boolean) : Int = {
+    def busquedaBinaria[A](coleccion : Array[A], aBuscar: A, criterio : (A,A) => Boolean) : Int = {
         //Funcion recursiva interna
         @annotation.tailrec
         def go(inicio : Int, fin: Int) : Int = {
@@ -32,22 +32,27 @@ object BusquedaBinariaGenerica extends App{
         go( 0, coleccion.size-1)
     }
 
+    // Se define el criterio
+    def criterioEnteros (num1 : Int, num2: Int) = num1>num2
+
     val array1 : Array[Int] = Array(1, 5, 35, 98, 123, 215)
-    var res = busquedaBinaria(array1, 1) (_ > _)
+    var res = busquedaBinaria(array1, 1, criterioEnteros)
     println(res)
 
-    res = busquedaBinaria(array1, 5) (_ > _)
+
+    res = busquedaBinaria(array1, 5, criterioEnteros)
+
     println(res)
 
-    res = busquedaBinaria(array1, 35) (_ > _)
+    res = busquedaBinaria(array1, 35, criterioEnteros)
     println(res)
 
-    res = busquedaBinaria(array1, 98) (_ > _)
+    res = busquedaBinaria(array1, 98, criterioEnteros)
     println(res)
 
-    res = busquedaBinaria(array1, 123) (_ > _)
+    res = busquedaBinaria(array1, 123, criterioEnteros)
     println(res)
 
-    res = busquedaBinaria(array1, 215) (_ > _)
+    res = busquedaBinaria(array1, 215, criterioEnteros)
     println(res)
 }

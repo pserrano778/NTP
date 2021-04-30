@@ -11,7 +11,7 @@ object BusquedaSaltosGenerica extends App{
      * @tparam A
      * @return
      */
-    def busquedaSaltosGenerica[A](coleccion : Array[A], aBuscar: A)(criterio : (A,A) => Boolean) : Int = {
+    def busquedaSaltosGenerica[A](coleccion : Array[A], aBuscar: A, criterio : (A,A) => Boolean) : Int = {
         // tamaño del bloque = raiz cuadrada del tamaño de la coleccion
         val tamBloque = sqrt(coleccion.length).toInt
         //Funcion recursiva interna
@@ -60,22 +60,24 @@ object BusquedaSaltosGenerica extends App{
         go(inicio)
     }
 
+    // Se define el criterio
+    def criterioEnteros (num1 : Int, num2: Int) = num1>num2
+
     val array1 : Array[Int] = Array(1, 5, 35, 98, 123, 215)
-    var res = busquedaSaltosGenerica(array1, 1) (_ > _)
+    var res = busquedaSaltosGenerica(array1, 1, criterioEnteros)
+
+    res = busquedaSaltosGenerica(array1, 5, criterioEnteros)
     println(res)
 
-    res = busquedaSaltosGenerica(array1, 5) (_ > _)
+    res = busquedaSaltosGenerica(array1, 35, criterioEnteros)
     println(res)
 
-    res = busquedaSaltosGenerica(array1, 35) (_ > _)
+    res = busquedaSaltosGenerica(array1, 98, criterioEnteros)
     println(res)
 
-    res = busquedaSaltosGenerica(array1, 98) (_ > _)
+    res = busquedaSaltosGenerica(array1, 123, criterioEnteros)
     println(res)
 
-    res = busquedaSaltosGenerica(array1, 123) (_ > _)
-    println(res)
-
-    res = busquedaSaltosGenerica(array1, 215) (_ > _)
+    res = busquedaSaltosGenerica(array1, 215, criterioEnteros)
     println(res)
 }

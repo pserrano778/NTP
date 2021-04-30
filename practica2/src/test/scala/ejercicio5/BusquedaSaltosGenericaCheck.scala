@@ -15,6 +15,9 @@ object BusquedaSaltosGenericaCheck extends Properties("Prueba de Practica 2 Ejer
     // Generacion de arrays de enteros aleatorios
     val enterosAleatorios = Gen.containerOfN[Array, Int](MAXIMALONGITUD, Gen.choose(MINENTERO, MAXENTERO+1))
 
+    // Se define el criterio
+    def criterioEnteros (num1 : Int, num2: Int) = num1>num2
+
     property("Busqueda correcta") = {
 
         forAll(enterosAleatorios) { (array) => {
@@ -24,7 +27,7 @@ object BusquedaSaltosGenericaCheck extends Properties("Prueba de Practica 2 Ejer
 
             // Se realiza una búsqueda de todos los elementos del array actual
             for(i <- 0 until arrayOrdenado.length) {
-                val resultadoBusquedaSaltos = busquedaSaltosGenerica(arrayOrdenado, arrayOrdenado(i)) (_ > _)
+                val resultadoBusquedaSaltos = busquedaSaltosGenerica(arrayOrdenado, arrayOrdenado(i), criterioEnteros)
 
                 // Si en algún momento no es correcto
                 if(i != resultadoBusquedaSaltos && arrayOrdenado(i) != arrayOrdenado(resultadoBusquedaSaltos)) {
