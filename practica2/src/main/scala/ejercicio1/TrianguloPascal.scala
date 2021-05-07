@@ -11,9 +11,13 @@ object TrianguloPascal {
     def calcularValorTrianguloPascal(fila: Int, columna: Int): BigInt = {
         @annotation.tailrec
         def go(num: BigInt, acum: BigInt) : BigInt = {
+            // Si es 1 o 0, se devuelve el valor
             if (num == 1 || num == 0) acum
+            // En otro caso, se continua el calculo del factorial
             else go(num - 1, acum*num)
         }
+
+        //Formula para calcular el valor del triangulo deseado
         go(fila, 1) / (go(columna, 1) * go(fila - columna, 1))
     }
 

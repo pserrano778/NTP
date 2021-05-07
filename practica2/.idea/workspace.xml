@@ -46,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../funciones2c" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -168,6 +168,8 @@
       <workItem from="1619769016861" duration="6484000" />
       <workItem from="1619783454938" duration="4826000" />
       <workItem from="1619797675986" duration="3298000" />
+      <workItem from="1620372635314" duration="277000" />
+      <workItem from="1620378797448" duration="1464000" />
     </task>
     <servers />
   </component>

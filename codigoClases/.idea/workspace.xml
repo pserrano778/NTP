@@ -35,17 +35,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica2" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Construccion">
-    <configuration name="ClasesAbstractas" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Abstractas.ClasesAbstractas" />
+  <component name="RunManager" selected="Application.EjemploTrait2">
+    <configuration name="EjemploObjeto2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Objetos.EjemploObjeto2" />
       <module name="codigoClases" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Abstractas.*" />
+          <option name="PATTERN" value="Objetos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -53,12 +54,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Construccion" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Construccion.Construccion" />
+    <configuration name="EjemploObjeto3" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Objetos.EjemploObjeto3" />
       <module name="codigoClases" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Construccion.*" />
+          <option name="PATTERN" value="Objetos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,12 +67,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GestorEventos" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Abstractas.GestorEventos" />
+    <configuration name="EjemploTrait2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="UsoTrait.EjemploTrait2" />
       <module name="codigoClases" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Abstractas.*" />
+          <option name="PATTERN" value="UsoTrait.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +80,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Herencia" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Introduccion.Herencia" />
+    <configuration name="Personajes" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ClasesCase.Personajes" />
       <module name="codigoClases" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Introduccion.*" />
+          <option name="PATTERN" value="ClasesCase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Introduccion" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Introduccion.Introduccion" />
+    <configuration name="PruebaNotificacion" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ClasesCase.PruebaNotificacion" />
       <module name="codigoClases" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Introduccion.*" />
+          <option name="PATTERN" value="ClasesCase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,26 +106,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Construccion" />
-        <item itemvalue="Application.GestorEventos" />
-        <item itemvalue="Application.ClasesAbstractas" />
-        <item itemvalue="Application.Herencia" />
-        <item itemvalue="Application.Introduccion" />
+        <item itemvalue="Application.EjemploTrait2" />
+        <item itemvalue="Application.Personajes" />
+        <item itemvalue="Application.PruebaNotificacion" />
+        <item itemvalue="Application.EjemploObjeto2" />
+        <item itemvalue="Application.EjemploObjeto3" />
       </list>
     </recent_temporary>
   </component>
@@ -138,6 +137,7 @@
       <updated>1619768478410</updated>
       <workItem from="1619768479536" duration="157000" />
       <workItem from="1619768647193" duration="6139000" />
+      <workItem from="1620372917851" duration="5817000" />
     </task>
     <servers />
   </component>
