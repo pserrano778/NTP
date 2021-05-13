@@ -4,7 +4,7 @@ import ejercicio1.TrianguloPascal.calcularValorTrianguloPascal
 import org.scalacheck.Prop.forAll
 import org.scalacheck.{Gen, Properties}
 
-object Ejercicio2Check extends Properties("Prueba de Practica 2 Ejercicio 1"){
+object Ejercicio2Check extends Properties("Prueba de Practica 2 Ejercicio 2"){
     val MAXIMO = 15
     val MAXNUMEROS = 10
     // Se generan los terminos que se van a calcular
