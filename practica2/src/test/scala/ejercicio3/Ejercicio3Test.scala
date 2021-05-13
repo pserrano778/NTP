@@ -50,4 +50,9 @@ class Ejercicio3Test  extends AnyFunSuite {
         assert(!ejercicio3.BalanceoCadenasConParentesis.chequearBalance("())()())".toList))
     }
 
+    // Prueba 8
+    test("()()())("){
+        assert(!ejercicio3.BalanceoCadenasConParentesis.chequearBalance("()()())(".toList))
+    }
+
 }
