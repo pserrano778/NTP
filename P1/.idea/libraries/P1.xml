@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="P1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/NTP_Practica1_PedroSerranoPerez.zip!/" />
+      <root url="jar://$PROJECT_DIR$/tsp.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

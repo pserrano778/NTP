@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -106,17 +106,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.EjemploTrait2" />
@@ -138,6 +127,10 @@
       <workItem from="1619768479536" duration="157000" />
       <workItem from="1619768647193" duration="6139000" />
       <workItem from="1620372917851" duration="5817000" />
+      <workItem from="1621014013376" duration="2009000" />
+      <workItem from="1621027902621" duration="1451000" />
+      <workItem from="1621080098773" duration="20000" />
+      <workItem from="1621080247596" duration="29000" />
     </task>
     <servers />
   </component>
