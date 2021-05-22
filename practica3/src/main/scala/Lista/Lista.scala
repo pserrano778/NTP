@@ -114,17 +114,15 @@ object Lista extends App{
      * @tparam A
      * @return
      */
-    /*def concatenar[A](lista1: Lista[A], lista2: Lista[A]): Lista[A] = {
-
-
-        def go(lista1: Lista[A], lista2: Lista[A]): Unit ={
-            lista1 match {
-                case Nil => acum
-                case Cons(cabeza, cola) => if(cola == Nil) cola = lista2
-            }
+    def concatenar[A](lista1: Lista[A], lista2: Lista[A]): Lista[A] = {
+        // Se comprueba el tipo de lista 1
+        lista1 match {
+            // Si es lista Nil (vacía) devolvemos la segunda lista
+            case Nil => lista2
+            // Si hay elementos comenzamos, se construye la lista, procesando la cola de forma recursiva
+            case Cons(cabeza, cola) => Cons(cabeza, concatenar(cola, lista2))
         }
-        }
-    }*/
+    }
 
     /**
      * Funcion de utilidad para aplicar una funcion de forma sucesiva a los
@@ -137,7 +135,19 @@ object Lista extends App{
      * @tparam B
      * @return
      */
-    //def foldRight[A, B](lista: Lista[A], neutro: B)(funcion: (A, B) => B): B = ???
+    def foldRight[A, B](lista: Lista[A], neutro: B)(funcion: (A, B) => B): B = {
+        @annotation.tailrec
+        def go (lista: Lista[A], acum: B): B ={
+            // Comprobamos qué tipo de lista tenemos
+            lista match {
+                // Si es lista Nil (vacía) devolvemos el acumulador
+                case Nil => acum
+                // Si hay elementos, realizamos la operacion con lka cabeza y el acumulador, y continuamos con el resto
+                case Cons(cabeza, cola) => go(cola, funcion(cabeza, acum))
+            }
+        }
+        go(lista, neutro)
+    }
 
     /**
      * Suma mediante foldRight
@@ -145,7 +155,10 @@ object Lista extends App{
      * @param listaEnteros
      * @return
      */
-    //def sumaFoldRight(listaEnteros: Lista[Int]): Double = ???
+    def sumaFoldRight(listaEnteros: Lista[Int]): Double = {
+        def suma (num1: Int, num2: Int) = num1 + num2
+        foldRight(listaEnteros, 0)(suma)
+    }
 
     /**
      * Producto mediante foldRight
@@ -153,7 +166,10 @@ object Lista extends App{
      * @param listaEnteros
      * @return
      */
-    //def productoFoldRight(listaEnteros: Lista[Int]): Double = ???
+    def productoFoldRight(listaEnteros: Lista[Int]): Double = {
+        def producto (num1: Int, num2: Int) = num1 * num2
+        foldRight(listaEnteros, 0)(producto)
+    }
 
     /**
      *  67 * Reemplaza la cabeza por nuevo valor. Se asume que si la lista esta vacia
@@ -245,8 +261,6 @@ object Lista extends App{
         }
     }
 
-
-
     /**
      * Elimina el ultimo elemento de la lista. Aqui no se pueden compartir
      * datos en los objetos y hay que generar una nueva lista copiando
@@ -257,14 +271,21 @@ object Lista extends App{
      * @return
      */
     def eliminarUltimo[A](lista: Lista[A]): Lista[A] = {
-        Lista()
+
+        def go(lista: Lista[A], acum: Seq[A]): Seq[A]={
+            // Comprobamos qué tipo de lista tenemos
+            lista match {
+                // Si es una lista Nil (vacía), se devuelve (no hay elementos para eliminar)
+                case Nil => acum.dropRight(1)
+                // Si quedan elementos
+                case Cons (cabeza, cola) => go (cola, acum:+cabeza)
+            }
+        }
+        Lista(go(lista, Seq()):_*)
     }
-
-    val lista1 = Lista(1, 2, 3, 4)
-    println(lista1)
-
+    val lista1 = Lista(1, 2, 3, 5, 6)
+    val lista2 = Lista(3, 4)
     println(eliminarUltimo(lista1))
-
     /**
      * foldLeft con recursividad tipo tail
      *

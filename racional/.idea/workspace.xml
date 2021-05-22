@@ -42,6 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.GestorConexiones">
     <configuration name="GestorConexiones" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -77,17 +78,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GestorConexiones" />
@@ -105,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1620977819331</updated>
       <workItem from="1620977820542" duration="4878000" />
+      <workItem from="1621591860343" duration="638000" />
     </task>
     <servers />
   </component>
@@ -121,5 +112,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

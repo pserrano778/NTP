@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../racional" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -131,6 +131,7 @@
       <workItem from="1621027902621" duration="1451000" />
       <workItem from="1621080098773" duration="20000" />
       <workItem from="1621080247596" duration="29000" />
+      <workItem from="1621591787016" duration="72000" />
     </task>
     <servers />
   </component>

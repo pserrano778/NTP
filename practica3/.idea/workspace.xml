@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codigoClases" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -78,6 +78,9 @@
       <workItem from="1621010789723" duration="15509000" />
       <workItem from="1621076839451" duration="5118000" />
       <workItem from="1621082056810" duration="5000" />
+      <workItem from="1621582431821" duration="176000" />
+      <workItem from="1621584387323" duration="9762000" />
+      <workItem from="1621625470653" duration="4559000" />
     </task>
     <servers />
   </component>
@@ -95,5 +98,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
