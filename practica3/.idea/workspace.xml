@@ -43,10 +43,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codigoClases" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica2" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="ScalaTest.ListaTest">
     <configuration name="Lista" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Lista.Lista" />
       <module name="practica3" />
@@ -60,8 +60,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListaTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica3" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="testClassPath" value="Lista.ListaTest" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.ListaTest" />
         <item itemvalue="Application.Lista" />
       </list>
     </recent_temporary>
@@ -81,6 +106,7 @@
       <workItem from="1621582431821" duration="176000" />
       <workItem from="1621584387323" duration="9762000" />
       <workItem from="1621625470653" duration="4559000" />
+      <workItem from="1621679195338" duration="10373000" />
     </task>
     <servers />
   </component>

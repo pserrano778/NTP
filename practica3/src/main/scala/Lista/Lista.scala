@@ -136,17 +136,13 @@ object Lista extends App{
      * @return
      */
     def foldRight[A, B](lista: Lista[A], neutro: B)(funcion: (A, B) => B): B = {
-        @annotation.tailrec
-        def go (lista: Lista[A], acum: B): B ={
-            // Comprobamos qué tipo de lista tenemos
-            lista match {
-                // Si es lista Nil (vacía) devolvemos el acumulador
-                case Nil => acum
-                // Si hay elementos, realizamos la operacion con lka cabeza y el acumulador, y continuamos con el resto
-                case Cons(cabeza, cola) => go(cola, funcion(cabeza, acum))
-            }
+        // Comprobamos qué tipo de lista tenemos
+        lista match {
+            // Si es lista Nil (vacía) devolvemos el valor neutro
+            case Nil => neutro
+            // Si hay elementos, aplicamos la función con la cabeza, y llamamos a foldRight con la cola
+            case Cons(cabeza, cola) => funcion(cabeza, foldRight(cola, neutro)(funcion))
         }
-        go(lista, neutro)
     }
 
     /**
@@ -156,7 +152,10 @@ object Lista extends App{
      * @return
      */
     def sumaFoldRight(listaEnteros: Lista[Int]): Double = {
+        // Definimos la funcion suma
         def suma (num1: Int, num2: Int) = num1 + num2
+
+        // Llamamos a foldRight utilizando la funcion suma y el elemento neutro 0
         foldRight(listaEnteros, 0)(suma)
     }
 
@@ -167,8 +166,11 @@ object Lista extends App{
      * @return
      */
     def productoFoldRight(listaEnteros: Lista[Int]): Double = {
+        // Definimos la funcion producto
         def producto (num1: Int, num2: Int) = num1 * num2
-        foldRight(listaEnteros, 0)(producto)
+
+        // Llamamos a foldRight utilizando la funcion producto y el elemento neutro 1
+        foldRight(listaEnteros, 1)(producto)
     }
 
     /**
@@ -271,21 +273,20 @@ object Lista extends App{
      * @return
      */
     def eliminarUltimo[A](lista: Lista[A]): Lista[A] = {
-
+        // Función tail recurseve interna, que devuelve
         def go(lista: Lista[A], acum: Seq[A]): Seq[A]={
             // Comprobamos qué tipo de lista tenemos
             lista match {
-                // Si es una lista Nil (vacía), se devuelve (no hay elementos para eliminar)
+                // Si es una lista Nil (vacía), se devuelve acum, eliminando el útlimo elemento
                 case Nil => acum.dropRight(1)
                 // Si quedan elementos
                 case Cons (cabeza, cola) => go (cola, acum:+cabeza)
             }
         }
+        // Creamos una lista, con la secuencia obtenida
         Lista(go(lista, Seq()):_*)
     }
-    val lista1 = Lista(1, 2, 3, 5, 6)
-    val lista2 = Lista(3, 4)
-    println(eliminarUltimo(lista1))
+
     /**
      * foldLeft con recursividad tipo tail
      *
@@ -296,8 +297,15 @@ object Lista extends App{
      * @tparam B parametro de tipo del elemento neutro
      * @return
      */
-    //@annotation.tailrec
-    //def foldLeft[A, B](lista: Lista[A], neutro: B)(funcion: (B, A) => B): B = ???
-
-
+    @annotation.tailrec
+    def foldLeft[A, B](lista: Lista[A], neutro: B)(funcion: (B, A) => B): B = {
+        // Comprobamos qué tipo de lista tenemos
+        lista match {
+            // Si es lista Nil (vacía) devolvemos el valor acumulado
+            case Nil => neutro
+            // Si hay elementos, realizamos la operacion con la cabeza y el valor acumulado, y continuamos con el resto
+            // llamando a foldLeft
+            case Cons(cabeza, cola) => foldLeft(cola, funcion(neutro, cabeza))(funcion)
+        }
+    }
 }
