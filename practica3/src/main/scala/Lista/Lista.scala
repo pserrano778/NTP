@@ -20,7 +20,7 @@ case object Nil extends Lista[Nothing]
 */
 case class Cons[+A](cabeza : A, cola : Lista[A]) extends Lista[A]
 
-object Lista extends App{
+object Lista{
     /**
      * Metodo para permitir crear listas sin usar new
      *
@@ -152,11 +152,8 @@ object Lista extends App{
      * @return
      */
     def sumaFoldRight(listaEnteros: Lista[Int]): Double = {
-        // Definimos la funcion suma
-        def suma (num1: Int, num2: Int) = num1 + num2
-
         // Llamamos a foldRight utilizando la funcion suma y el elemento neutro 0
-        foldRight(listaEnteros, 0)(suma)
+        foldRight(listaEnteros, 0)(_ + _)
     }
 
     /**
@@ -166,11 +163,8 @@ object Lista extends App{
      * @return
      */
     def productoFoldRight(listaEnteros: Lista[Int]): Double = {
-        // Definimos la funcion producto
-        def producto (num1: Int, num2: Int) = num1 * num2
-
         // Llamamos a foldRight utilizando la funcion producto y el elemento neutro 1
-        foldRight(listaEnteros, 1)(producto)
+        foldRight(listaEnteros, 1)(_ * _)
     }
 
     /**
@@ -273,18 +267,20 @@ object Lista extends App{
      * @return
      */
     def eliminarUltimo[A](lista: Lista[A]): Lista[A] = {
-        // Función tail recurseve interna, que devuelve
-        def go(lista: Lista[A], acum: Seq[A]): Seq[A]={
-            // Comprobamos qué tipo de lista tenemos
-            lista match {
-                // Si es una lista Nil (vacía), se devuelve acum, eliminando el útlimo elemento
-                case Nil => acum.dropRight(1)
-                // Si quedan elementos
-                case Cons (cabeza, cola) => go (cola, acum:+cabeza)
-            }
+        // Comprobamos qué tipo de lista tenemos
+        lista match {
+            // Si es una lista Nil (vacía), se devuelve Nil (no quedan elementos
+            case Nil => Nil
+            // Si quedan elementos
+            case Cons (cabeza, cola) =>
+                // Comprobamos la cola para ver si es el último elemento
+                cola match {
+                    // Si la cola es Nil, es el último elemento y devolvemos Nil
+                    case Nil => Nil
+                    // Si quedan elementos, se añade la cabeza y se continua procesando la cola
+                    case Cons (sigCabeza, sigCola) => Cons(cabeza, eliminarUltimo(cola))
+                }
         }
-        // Creamos una lista, con la secuencia obtenida
-        Lista(go(lista, Seq()):_*)
     }
 
     /**

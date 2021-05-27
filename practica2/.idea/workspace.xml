@@ -58,7 +58,7 @@
       <recent name="ejercicio5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Ejercicio1Check">
+  <component name="RunManager" selected="ScalaTest.Ejercicio4Test">
     <configuration name="Ejercicio1Check" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ejercicio1.Ejercicio1Check" />
       <module name="practica2" />
@@ -85,15 +85,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,20 +104,6 @@
       </option>
       <option name="testKind" value="Class" />
       <option name="testClassPath" value="ejercicio2.Ejercicio2Test" />
-      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ejercicio2Test.Serie de Fibonacci - termino 15" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <module name="practica2" />
-      <option name="allowRunningInParallel" value="false" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="ejercicio2.Ejercicio2Test" />
-      <option name="testName" value="Serie de Fibonacci - termino 15" />
       <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,13 +122,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ejercicio4Test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica2" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="testClassPath" value="ejercicio4.Ejercicio4Test" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.Ejercicio4Test" />
         <item itemvalue="Application.Ejercicio1Check" />
         <item itemvalue="Application.Ejercicio2Check" />
         <item itemvalue="ScalaTest.Ejercicio3Test" />
         <item itemvalue="ScalaTest.Ejercicio2Test" />
-        <item itemvalue="ScalaTest.Ejercicio2Test.Serie de Fibonacci - termino 15" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +181,9 @@
       <workItem from="1621082048429" duration="6000" />
       <workItem from="1621694588885" duration="1205000" />
       <workItem from="1621698013698" duration="512000" />
+      <workItem from="1622153163977" duration="161000" />
+      <workItem from="1622153335589" duration="23000" />
+      <workItem from="1622153369573" duration="173000" />
     </task>
     <servers />
   </component>

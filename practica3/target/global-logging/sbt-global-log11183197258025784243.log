@@ -1,0 +1,103 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\Usuario\AppData\Local\Temp\idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\Usuario\AppData\Local\Temp\idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.7 (Oracle Corporation Java 15.0.2)
+[debug]       Load.loadUnit: plugins took 46.8913ms
+[debug]       Load.loadUnit: defsScala took 0.1773ms
+[debug] [Loading] Scanning directory C:\Users\Usuario\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Usuario\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 10.291001 ms
+[debug]           Load.resolveProject(global-plugins) took 26.767399ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\Usuario\.sbt\1.0\plugins, plugins: List(<none>))) took 50.5408ms
+[debug] [Loading] Done in C:\Users\Usuario\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 63.284601ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.1591ms
+[debug]     Load.loadUnit(file:/C:/Users/Usuario/.sbt/1.0/plugins/, ...) took 115.9077ms
+[debug]   Load.apply: load took 224.897699ms
+[debug]   Load.apply: resolveProjects took 3.1718ms
+[debug]   Load.apply: finalTransforms took 33.4988ms
+[debug]   Load.apply: config.delegates took 4.212099ms
+[debug]   Load.apply: Def.make(settings)... took 447.3032ms
+[debug]   Load.apply: structureIndex took 54.2542ms
+[debug]   Load.apply: mkStreams took 0.823301ms
+[info] loading global plugins from C:\Users\Usuario\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 1509.390699ms
+[debug]           Load.loadUnit: plugins took 14.1118ms
+[debug]           Load.loadUnit: defsScala took 0.002301ms
+[debug] [Loading] Scanning directory C:\Users\Usuario\Documents\GitHub\NTP\practica3\project
+[debug]             Load.loadUnit: mkEval took 3.559ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Usuario\Documents\GitHub\NTP\practica3\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.0281 ms
+[info] loading settings for project practica3-build from idea.sbt ...
+[debug]               Load.resolveProject(practica3-build) took 2.7285ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id practica3-build, base: C:\Users\Usuario\Documents\GitHub\NTP\practica3\project, plugins: List(<none>))) took 4.188699ms
+[debug] [Loading] Done in C:\Users\Usuario\Documents\GitHub\NTP\practica3\project, returning: (practica3-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1195.708699ms
+[debug]           Load.loadUnit: cleanEvalClasses took 4.317501ms
+[debug]         Load.loadUnit(file:/C:/Users/Usuario/Documents/GitHub/NTP/practica3/project/, ...) took 1214.7752ms
+[debug]       Load.apply: load took 1215.6959ms
+[debug]       Load.apply: resolveProjects took 0.0715ms
+[debug]       Load.apply: finalTransforms took 8.5163ms
+[debug]       Load.apply: config.delegates took 0.2327ms
+[debug]       Load.apply: Def.make(settings)... took 50.4118ms
+[debug]       Load.apply: structureIndex took 18.734001ms
+[debug]       Load.apply: mkStreams took 0.0016ms
+[info] loading project definition from C:\Users\Usuario\Documents\GitHub\NTP\practica3\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 2142.4761ms
+[debug]     Load.loadUnit: defsScala took 0.002101ms
+[debug] [Loading] Scanning directory C:\Users\Usuario\Documents\GitHub\NTP\practica3
+[debug]       Load.loadUnit: mkEval took 0.1641ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Usuario\Documents\GitHub\NTP\practica3, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))), Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 1.142801 ms
+[info] loading settings for project practica3 from build.sbt ...
+[debug]         Load.resolveProject(practica3) took 16.2231ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id practica3, base: C:\Users\Usuario\Documents\GitHub\NTP\practica3, plugins: List(<none>))) took 18.026001ms
+[debug] [Loading] Done in C:\Users\Usuario\Documents\GitHub\NTP\practica3, returning: (practica3)
+[debug]     Load.loadUnit: loadedProjectsRaw took 1020.208199ms
+[debug]     Load.loadUnit: cleanEvalClasses took 21.7948ms
+[debug]   Load.loadUnit(file:/C:/Users/Usuario/Documents/GitHub/NTP/practica3/, ...) took 3185.0518ms
+[debug] Load.apply: load took 3186.0692ms
+[debug] Load.apply: resolveProjects took 0.0868ms
+[debug] Load.apply: finalTransforms took 15.6703ms
+[debug] Load.apply: config.delegates took 0.2261ms
+[debug] Load.apply: Def.make(settings)... took 44.028101ms
+[debug] Load.apply: structureIndex took 14.430499ms
+[debug] Load.apply: mkStreams took 0.0017ms
+[info] set current project to practica3 (in build file:/C:/Users/Usuario/Documents/GitHub/NTP/practica3/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 63596 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 63596, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to practica3 (in build file:/C:/Users/Usuario/Documents/GitHub/NTP/practica3/)
+[debug] > Exec(idea-shell, None, None)

@@ -1,5 +1,0 @@
-package ArboleBinario
-
-class ArboleBinario {
-
-}

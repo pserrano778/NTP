@@ -177,15 +177,11 @@ class ListaTest extends AnyFunSuite{
 
     // Prueba 31: Test de FoldLeft, aplicando la operacion suma
     test("Suma FoldLeft") {
-        // Definimos la operacion suma
-        def suma (num1: Int, num2: Int) = num1 + num2
-        assert(foldLeft(listaEnteros2, 0)(suma) === 6)
+        assert(foldLeft(listaEnteros2, 0)(_ + _) === 6)
     }
 
     // Prueba 32: Test de FoldLeft, aplicando la operacion producto
     test("Prodcuto FoldLeft") {
-        // Definimos la operacion producto
-        def producto (num1: Int, num2: Int) = num1 * num2
-        assert(foldLeft(listaEnteros2, 1)(producto) === 8)
+        assert(foldLeft(listaEnteros2, 1)((_ * _)) === 8)
     }
 }
