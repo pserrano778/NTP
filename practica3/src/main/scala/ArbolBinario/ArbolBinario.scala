@@ -1,5 +1,8 @@
 package ArbolBinario
 
+import scala.annotation.tailrec
+import scala.collection.mutable
+
 
 sealed trait ArbolBinario[+A]
 
@@ -14,31 +17,87 @@ case class NodoHoja[+A] (id: String, valor: A) extends Nodo[A](id)
 
 object ArbolBinarioDoubles extends App{
     def apply(elementos: Double*): ArbolBinario[Double] = {
-        def go (profundidad: Int, idAnterior: String ,elementos: Double*): ArbolBinario[Double] = {
+        def go (profundidad: Int, id: String ,elementos: Double*): ArbolBinario[Double] = {
             // Si no quedan elementos, devolvemos lista Nil (sin elementos)
             if (elementos.size == 0) Nil
 
             // Si quedan elementos, creamos una lista asignando la cabeza, y llamando de forma recursiva
             // a esta función para procesar los elementos restantes
-            else if(elementos.size == 1) NodoHoja(idAnterior+"."+profundidad, elementos.head)
+            else if(elementos.size == 1) NodoHoja(id, elementos.head)
 
-            else NodoInterno(idAnterior+"."+profundidad, go(profundidad+1, idAnterior+"."+profundidad, elementos.slice(0, (elementos.size+1)/2):_*),
-                go(profundidad, idAnterior+"."+profundidad, elementos.slice((elementos.size+1)/2, elementos.size):_*))
+            else NodoInterno(id, go(profundidad+1, id+"."+0, elementos.slice(0, (elementos.size+1)/2):_*),
+                go(profundidad, id+"."+1, elementos.slice((elementos.size+1)/2, elementos.size):_*))
         }
-        go(0, "",  elementos: _*)
+        go(0, "0",  elementos: _*)
     }
 
-    def recorridoProfundidad(arbol: ArbolBinario[Double]): String = {
+    def recorridoProfundidadPreorden(arbol: ArbolBinario[Double]): String = {
         arbol match {
-            case Nil => "Nil"
-            case NodoInterno(id, hijoIzq, hijoDcha) => id + " - " + recorridoProfundidad(hijoIzq) +
-                                                            " - " + recorridoProfundidad(hijoDcha)
-            case NodoHoja(id, valor) => id
+            case Nil => ""
+            case NodoInterno(id, hijoIzq, hijoDcha) => s"id: $id" + " | " + recorridoProfundidadPreorden(hijoIzq) +
+                                                            " | " + recorridoProfundidadPreorden(hijoDcha)
+            case NodoHoja(id, valor) => s"id: $id, valor: $valor"
         }
     }
 
-    def recorridoAnchura(arbol: ArbolBinario[Double]): String = {
-        ""
+    def recorridoProfundidadInorden(arbol: ArbolBinario[Double]): String = {
+        arbol match {
+            case Nil => ""
+            case NodoInterno(id, hijoIzq, hijoDcha) => recorridoProfundidadInorden(hijoIzq) + " | " + s"id: $id" +  " | " +
+                                                       recorridoProfundidadInorden(hijoDcha)
+            case NodoHoja(id, valor) => s"id: $id, valor: $valor"
+        }
+    }
+
+    def recorridoProfundidadPostorden(arbol: ArbolBinario[Double]): String = {
+        arbol match {
+            case Nil => ""
+            case NodoInterno(id, hijoIzq, hijoDcha) => recorridoProfundidadPostorden(hijoIzq) + " | " +
+                                                       recorridoProfundidadPostorden(hijoDcha) + " | " + s"id: $id"
+            case NodoHoja(id, valor) => s"id: $id, valor: $valor"
+        }
+    }
+
+    def recorridoAnchuraRecursivo(arbol: ArbolBinario[Double]): String = {
+        def recorrerNivel(arbol: ArbolBinario[Double], nivel: Int): String = {
+            arbol match {
+                case Nil => ""
+                case NodoInterno(id, hijoIzq, hijoDcha) =>
+                    if(nivel == 0) s"id: $id"
+                    else recorrerNivel(hijoIzq, nivel - 1) + recorrerNivel(hijoDcha, nivel - 1)
+                case NodoHoja(id, valor) =>
+                    if(nivel == 0) s"id: $id, valor: $valor"
+                    else ""
+            }
+        }
+
+        @annotation.tailrec
+        def go(arbol: ArbolBinario[Double], nivel: Int, profundidad: Int, acum: String): String = {
+            if (nivel < profundidad) go (arbol, nivel+1, profundidad, acum + recorrerNivel(arbol, nivel))
+            else acum + recorrerNivel(arbol, nivel)
+        }
+
+        go (arbol, 0, profundidadArbol(arbol), "")
+    }
+
+    def recorridoAnchuraUsandoCola(arbol: ArbolBinario[Double]): String = {
+        val cola = mutable.Queue[ArbolBinario[Double]]()
+        var resultado = ""
+
+        cola.addOne(ArbolBinarioDoubles.arbol)
+
+        while(cola.size > 0){
+            val nodo = cola.dequeue
+            resultado = resultado.concat(nodo match {
+                case Nil => ""
+                case NodoInterno(id, hijoIzq, hijoDcha) =>
+                    cola.addOne(hijoIzq)
+                    cola.addOne(hijoDcha)
+                    s"id: $id"
+                case NodoHoja(id, valor) => s"id: $id, valor: $valor"
+            })
+        }
+        resultado
     }
 
     def numeroHojas(arbol: ArbolBinario[Double]): Int = {
@@ -74,22 +133,25 @@ object ArbolBinarioDoubles extends App{
         aplicarFuncionAHojas(arbol)(_ * _)
     }
 
-    def profundidadArbol(arbol: ArbolBinario[Double]): Double = {
+    def profundidadArbol(arbol: ArbolBinario[Double]): Int = {
         arbol match {
-            case Nil => 0.0
+            case Nil => 0
             case NodoInterno(id, hijoIzq, hijoDcha) => {
-                if(profundidadArbol(hijoIzq) > profundidadArbol(hijoDcha))
-            },
-        profundidadArbol
-            case NodoHoja(id, valor) => valor
+                val profundidadIzq = 1 + profundidadArbol(hijoIzq)
+                val profundidadDcha = 1 + profundidadArbol(hijoDcha)
+                if(profundidadIzq >= profundidadDcha) profundidadIzq
+                else profundidadDcha
+            }
+            case NodoHoja(id, valor) => 1
         }
     }
 
     val arbol = ArbolBinarioDoubles(1.1, 2.2, 3.3, 4.4, 5.5, 6.6)
-    println(arbol)
 
     val arbol2 = ArbolBinarioDoubles(1.1, 2.2);
-    println(recorridoProfundidad(arbol))
+
+    println(recorridoAnchuraRecursivo(arbol))
+    println(recorridoAnchuraUsandoCola(arbol))
 }
 
 

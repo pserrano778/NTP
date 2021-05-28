@@ -52,7 +52,6 @@
   </component>
   <component name="RunManager" selected="Application.ArbolBinarioDoubles">
     <configuration name="ArbolBinarioDoubles" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-15" />
       <option name="MAIN_CLASS_NAME" value="ArbolBinario.ArbolBinarioDoubles" />
       <module name="practica3" />
       <extension name="coverage">
@@ -65,27 +64,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lista" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-15" />
-      <option name="MAIN_CLASS_NAME" value="Lista.Lista" />
-      <module name="practica3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lista.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,7 +90,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListaTest.Prodcuto FoldLeft" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ListaTest.Concatenar dos listas con elementos" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="practica3" />
       <option name="allowRunningInParallel" value="false" />
       <option name="selectedOptions">
@@ -111,24 +98,54 @@
       </option>
       <option name="testKind" value="Test name" />
       <option name="testClassPath" value="Lista.ListaTest" />
-      <option name="testName" value="Prodcuto FoldLeft" />
+      <option name="testName" value="Concatenar dos listas con elementos" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListaTest.Eliminar Ultimo en lista con varios elemento" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica3" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="Lista.ListaTest" />
+      <option name="testName" value="Eliminar Ultimo en lista con varios elemento" />
+      <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListaTest.Lista vacia con Lista vacia" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="practica3" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="testClassPath" value="Lista.ListaTest" />
+      <option name="testName" value="Lista vacia con Lista vacia" />
       <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ArbolBinarioDoubles" />
-      <item itemvalue="Application.Lista" />
+      <item itemvalue="ScalaTest.ListaTest.Concatenar dos listas con elementos" />
+      <item itemvalue="ScalaTest.ListaTest.Eliminar Ultimo en lista con varios elemento" />
       <item itemvalue="ScalaTest.ListaTest" />
-      <item itemvalue="ScalaTest.ListaTest.Prodcuto FoldLeft" />
+      <item itemvalue="ScalaTest.ListaTest.Lista vacia con Lista vacia" />
+      <item itemvalue="Application.ArbolBinarioDoubles" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ArbolBinarioDoubles" />
-        <item itemvalue="Application.Lista" />
+        <item itemvalue="ScalaTest.ListaTest.Lista vacia con Lista vacia" />
         <item itemvalue="ScalaTest.ListaTest" />
-        <item itemvalue="ScalaTest.ListaTest.Prodcuto FoldLeft" />
+        <item itemvalue="ScalaTest.ListaTest.Eliminar Ultimo en lista con varios elemento" />
+        <item itemvalue="ScalaTest.ListaTest.Concatenar dos listas con elementos" />
       </list>
     </recent_temporary>
   </component>
@@ -158,6 +175,7 @@
       <workItem from="1622152589284" duration="730000" />
       <workItem from="1622153339055" duration="19000" />
       <workItem from="1622153371300" duration="2025000" />
+      <workItem from="1622187403017" duration="12990000" />
     </task>
     <servers />
   </component>

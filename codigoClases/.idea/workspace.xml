@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica2" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -135,6 +135,7 @@
       <workItem from="1621696545779" duration="622000" />
       <workItem from="1622041251093" duration="2687000" />
       <workItem from="1622124511410" duration="630000" />
+      <workItem from="1622193788090" duration="869000" />
     </task>
     <servers />
   </component>
