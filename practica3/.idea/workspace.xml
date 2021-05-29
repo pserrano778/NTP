@@ -64,15 +64,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,11 +131,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ArbolBinarioDoubles" />
       <item itemvalue="ScalaTest.ListaTest.Concatenar dos listas con elementos" />
       <item itemvalue="ScalaTest.ListaTest.Eliminar Ultimo en lista con varios elemento" />
       <item itemvalue="ScalaTest.ListaTest" />
       <item itemvalue="ScalaTest.ListaTest.Lista vacia con Lista vacia" />
-      <item itemvalue="Application.ArbolBinarioDoubles" />
     </list>
     <recent_temporary>
       <list>
@@ -176,6 +174,7 @@
       <workItem from="1622153339055" duration="19000" />
       <workItem from="1622153371300" duration="2025000" />
       <workItem from="1622187403017" duration="12990000" />
+      <workItem from="1622306097800" duration="9196000" />
     </task>
     <servers />
   </component>

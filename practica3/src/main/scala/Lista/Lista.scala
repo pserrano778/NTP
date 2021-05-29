@@ -12,7 +12,7 @@ sealed trait Lista[+A]
 case object Nil extends Lista[Nothing]
 
 /**
-* Clase para definir la lista como compuesta por elemento inicial
+* Clase para definir la lista compuesta por elemento inicial
 * (cabeza) y resto (cola)
 * @param cabeza
 * @param cola
