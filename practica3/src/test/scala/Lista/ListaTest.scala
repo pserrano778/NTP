@@ -33,8 +33,12 @@ class ListaTest extends AnyFunSuite{
         @annotation.tailrec
         def comprobarConstructor[A](lista: Lista[A], elementos: A*): Boolean = {
             lista match {
+                // Si es Nil, que no queden elementos
                 case Nil => elementos.size == 0
+
+                // Si no es Nil
                 case Cons (cabeza, cola) =>
+                    // Que el número de elementos sea mayor a 0 y que las cabezas coincidan. Se continúa resto (cola)
                     if (elementos.size > 0 && cabeza == elementos.head) comprobarConstructor(cola, elementos.tail: _*)
                     else false
             }

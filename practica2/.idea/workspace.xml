@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0abeab6-fef6-4a3f-bf8b-0ccbf1ed3f16" name="Default Changelist" comment="" />
+    <list default="true" id="e0abeab6-fef6-4a3f-bf8b-0ccbf1ed3f16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/src/main/scala/ArbolBinario/ArbolBinario.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/src/main/scala/ArbolBinario/ArbolBinario.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/src/test/scala/ArbolBinario/ArbolBinarioCheck.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/src/test/scala/ArbolBinario/ArbolBinarioCheck.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/src/test/scala/ArbolBinario/ArbolBinarioTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/src/test/scala/ArbolBinario/ArbolBinarioTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/src/test/scala/Lista/ListaTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/src/test/scala/Lista/ListaTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/target/scala-2.13/classes/ArbolBinario/ArbolBinario.class" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/target/scala-2.13/classes/ArbolBinario/ArbolBinario.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scala" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -81,6 +89,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,6 +193,7 @@
       <workItem from="1622153335589" duration="23000" />
       <workItem from="1622153369573" duration="173000" />
       <workItem from="1622199810324" duration="45000" />
+      <workItem from="1623000916559" duration="4866000" />
     </task>
     <servers />
   </component>

@@ -172,8 +172,9 @@ object ArbolBinario extends App{
             else acum
         }
 
-        // Primera llamada a la función go, con el nivel 0, y la profundidad del árbol
-        go (arbol, 0, profundidadArbol(arbol), "")
+        // Primera llamada a la función go, con el nivel º, y la profundidad del árbol, con acum inicializado
+        // al valor del primer nodo (para los casos en los que solo haya un nodo Nil
+        go (arbol, 1, profundidadArbol(arbol), arbol.informacionNodo + " | ")
     }
 
     /**
@@ -190,7 +191,7 @@ object ArbolBinario extends App{
         var resultado = ""
 
         // Añadimos el primer nodo
-        cola.addOne(ArbolBinario.arbol)
+        cola.addOne(arbol)
 
         // Mientras la cola no esté vacía
         while(cola.nonEmpty){
@@ -390,7 +391,7 @@ object ArbolBinario extends App{
     }
 
     /**
-     * Función recursiva que permite obtener el valor que contiene una determinada hoja de un árbol binario
+     * Función recursiva que permite obtener el valor que contiene una determinada hoja de un árbol binario Balanceado
      * @param arbol
      * @param numHoja
      * @return
@@ -441,27 +442,6 @@ object ArbolBinario extends App{
         // Primera llamada a la función go, con la cota Inferior a 0, y la superior al número de hojas -1
         go(arbol, 0, numHojasArbol-1)
     }
-
-    val arbol = ArbolBinario(1.1, 2.2, 3.3, 4.4, 5.5, 6.6)
-
-    val arbol2 = ArbolBinario(1,2,3,4,5,6,7,8,9,10,11)
-
-    println(recorridoProfundidadPostorden(arbol))
-    println(recorridoProfundidadPreorden(arbol))
-    println(recorridoAnchuraRecursivo(arbol))
-    println(recorridoAnchuraUsandoCola(arbol))
-    println(obtenerValorHoja(arbol2, 0))
-    println(obtenerValorHoja(arbol2, 1))
-    println(obtenerValorHoja(arbol2, 2))
-    println(obtenerValorHoja(arbol2, 3))
-    println(obtenerValorHoja(arbol2, 4))
-    println(obtenerValorHoja(arbol2, 5))
-    println(obtenerValorHoja(arbol2, 6))
-    println(obtenerValorHoja(arbol2, 7))
-    println(obtenerValorHoja(arbol2, 8))
-    println(obtenerValorHoja(arbol2, 9))
-    println(obtenerValorHoja(arbol2, 10))
-
 }
 
 
