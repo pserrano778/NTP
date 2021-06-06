@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2360e77e-ce0c-4cb5-941e-e4d752618244" name="Default Changelist" comment="" />
+    <list default="true" id="2360e77e-ce0c-4cb5-941e-e4d752618244" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/scala/ArbolBinario/ArbolBinarioCheck.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/ArbolBinario/ArbolBinarioTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codigoClases/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../codigoClases/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d00491e6300feb45c1f7$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d00491e6300feb45c1f7.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d00491e6300feb45c1f7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ArbolBinario/ArbolBinario.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ArbolBinario/ArbolBinario.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Lista/Lista.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Lista/Lista.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinarioDoubles$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinarioDoubles$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinarioDoubles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/Nil$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/Nil$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/Nil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/Nil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/Nodo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoHoja$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoHoja$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoHoja.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoHoja.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoInterno$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoInterno$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoInterno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/NodoInterno.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../P1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../codigoClases" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -52,7 +74,7 @@
   </component>
   <component name="RunManager" selected="Application.ArbolBinarioDoubles">
     <configuration name="ArbolBinarioDoubles" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ArbolBinario.ArbolBinarioDoubles" />
+      <option name="MAIN_CLASS_NAME" value="ArbolBinario.ArbolBinario" />
       <module name="practica3" />
       <extension name="coverage">
         <pattern>
@@ -175,6 +197,12 @@
       <workItem from="1622153371300" duration="2025000" />
       <workItem from="1622187403017" duration="12990000" />
       <workItem from="1622306097800" duration="9196000" />
+      <workItem from="1622802484671" duration="1189000" />
+      <workItem from="1622828768169" duration="1783000" />
+      <workItem from="1622847270522" duration="664000" />
+      <workItem from="1622888149497" duration="3425000" />
+      <workItem from="1622904765643" duration="2699000" />
+      <workItem from="1622917106990" duration="13580000" />
     </task>
     <servers />
   </component>

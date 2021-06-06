@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebf4faa2-c4cd-474e-8543-4d2f738e8120" name="Default Changelist" comment="" />
+    <list default="true" id="ebf4faa2-c4cd-474e-8543-4d2f738e8120" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica3/src/main/scala/ArbolBinario/ArbolBinario.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/src/main/scala/ArbolBinario/ArbolBinario.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -136,6 +139,7 @@
       <workItem from="1622041251093" duration="2687000" />
       <workItem from="1622124511410" duration="630000" />
       <workItem from="1622193788090" duration="869000" />
+      <workItem from="1622907878514" duration="101000" />
     </task>
     <servers />
   </component>

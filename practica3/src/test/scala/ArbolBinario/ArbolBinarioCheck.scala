@@ -1,0 +1,5 @@
+package ArbolBinario
+
+object ArbolBinarioCheck {
+
+}

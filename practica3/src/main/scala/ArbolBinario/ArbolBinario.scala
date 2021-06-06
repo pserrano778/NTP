@@ -6,12 +6,16 @@ import scala.collection.mutable
  * Interfaz generica para el Árbol Binario genérico
  * @tparam A
  */
-sealed trait ArbolBinario[+A]
+sealed trait ArbolBinario[+A]{
+    def informacionNodo: String
+}
 
 /**
  * Objeto para definir un Árbol vacío (Nodo Nil)
  */
-case object Nil extends ArbolBinario[Nothing]
+case object Nil extends ArbolBinario[Nothing]{
+    override def informacionNodo : String = "Nodo Nulo"
+}
 
 /**
  * Clase abstracta que representa un Nodo genérico
@@ -19,7 +23,9 @@ case object Nil extends ArbolBinario[Nothing]
  * @param id
  * @tparam A
  */
-abstract class Nodo[+A] (id: String) extends ArbolBinario[A]
+abstract class Nodo[+A] (id: String) extends ArbolBinario[A]{
+    override def informacionNodo : String = s"id: $id"
+}
 
 /**
  * Clase para definir un Nodo Interno compuesto por un Id,
@@ -38,12 +44,15 @@ case class NodoInterno[+A] (id: String, hijoIzq: ArbolBinario[A], hijoDcha: Arbo
  * @param valor
  * @tparam A
  */
-case class NodoHoja[+A] (id: String, valor: A) extends Nodo[A](id)
+case class NodoHoja[+A] (id: String, valor: A) extends Nodo[A](id){
+    override def informacionNodo : String = super.informacionNodo + s" valor: $valor"
+}
+
 
 /**
  * Objeto para definir funcionalidades de los Arboles binarios
  */
-object ArbolBinarioDoubles extends App{
+object ArbolBinario extends App{
 
     /**
      * Método para permitir crear un Arbol Binario equilibrado de doubles sin utilizar new
@@ -55,15 +64,15 @@ object ArbolBinarioDoubles extends App{
         // Asignandole un Id que depende de la posición que tenga dentro del arbol ("0" para la rama izquierda y
         // "1" para la derecha, y un "-" que separa los distintos niveles de profudidad)
         def go (id: String, elementos: Double*): ArbolBinario[Double] = {
+
             // Si no hay elementos, se devuelve Nil
             if (elementos.isEmpty) Nil
 
             // Si queda un elemento, se devuelve la nueva hoja con ese elemento
             else if(elementos.size == 1) NodoHoja(id, elementos.head)
 
-            // Si quedan varios elementos, se devuelve un nuevo nodo interno, llamando a la función
-            // de forma recursiva para crear sus dos hijos (partiendo la secuencia de elementos por la
-            // mitad.
+            // Si quedan varios elementos, se devuelve un nuevo nodo interno, llamando a la función de forma
+            //  recursiva para crear sus dos hijos (partiendo la secuencia de elementos por la mitad
             else NodoInterno(id, go(id+"-0", elementos.slice(0, (elementos.size+1)/2):_*),
                 go(id+"-1", elementos.slice((elementos.size+1)/2, elementos.size):_*))
         }
@@ -73,76 +82,138 @@ object ArbolBinarioDoubles extends App{
     }
 
     /**
-     * Función recursiva que
+     * Función recursiva que permite obtener el recorrido en preorden de un árbol binario
      * @param arbol
      * @return
      */
     def recorridoProfundidadPreorden(arbol: ArbolBinario[Double]): String = {
+        // Comprobamos el tipo de nodo
         arbol match {
-            case Nil => ""
-            case NodoInterno(id, hijoIzq, hijoDcha) => s"id: $id" + " | " + recorridoProfundidadPreorden(hijoIzq) +
+
+            // Si es un nodo interno, se devuelve la información del nodo actual, concatenada con las llamadas
+            // recursivas con los hijos izquierdo y derecho respectivamente
+            case NodoInterno(id, hijoIzq, hijoDcha) => arbol.informacionNodo + " | " + recorridoProfundidadPreorden(hijoIzq) +
                                                             " | " + recorridoProfundidadPreorden(hijoDcha)
-            case NodoHoja(id, valor) => s"id: $id, valor: $valor"
+            // En otro caso, se devuelve la información del nodo
+            case _ => arbol.informacionNodo
         }
     }
 
+    /**
+     * Función recursiva que permite obtener el recorrido en inorden de un árbol binario
+     * @param arbol
+     * @return
+     */
     def recorridoProfundidadInorden(arbol: ArbolBinario[Double]): String = {
+        // Comprobamos el tipo de nodo
         arbol match {
-            case Nil => ""
-            case NodoInterno(id, hijoIzq, hijoDcha) => recorridoProfundidadInorden(hijoIzq) + " | " + s"id: $id" +  " | " +
+
+            // Si es un nodo interno, se llama a la función recursiva con el hijo izquierdo, se concatena la información
+            // del nodo actual, y se llama a la función recursiva con el hijo derecho
+            case NodoInterno(id, hijoIzq, hijoDcha) => recorridoProfundidadInorden(hijoIzq) + " | " + arbol.informacionNodo +  " | " +
                                                        recorridoProfundidadInorden(hijoDcha)
-            case NodoHoja(id, valor) => s"id: $id, valor: $valor"
+            // En otro caso, se devuelve la información del nodo
+            case _ => arbol.informacionNodo
         }
     }
 
+    /**
+     * Función recursiva que permite obtener el recorrido en postorden de un árbol binario
+     * @param arbol
+     * @return
+     */
     def recorridoProfundidadPostorden(arbol: ArbolBinario[Double]): String = {
+        // Comprobamos el tipo de nodo
         arbol match {
-            case Nil => ""
+
+            // Si es un nodo interno, se llama a la función recursiva con el hijo izquierdo y con el derecho
+            // respectivamente, y se concatena la información del nodo actual
             case NodoInterno(id, hijoIzq, hijoDcha) => recorridoProfundidadPostorden(hijoIzq) + " | " +
-                                                       recorridoProfundidadPostorden(hijoDcha) + " | " + s"id: $id"
-            case NodoHoja(id, valor) => s"id: $id, valor: $valor"
+                                                       recorridoProfundidadPostorden(hijoDcha) + " | " + arbol.informacionNodo
+            // En otro caso, se devuelve la información del nodo
+            case _ => arbol.informacionNodo
         }
     }
 
+    /**
+     * Función recursiva que permite obtener el recorrido en en anchura de un árbol binario
+     * @param arbol
+     * @return
+     */
     def recorridoAnchuraRecursivo(arbol: ArbolBinario[Double]): String = {
+        // Función recursiva que permite mostrar la información de los nodos de un nivel
         def recorrerNivel(arbol: ArbolBinario[Double], nivel: Int): String = {
-            arbol match {
-                case Nil => ""
-                case NodoInterno(id, hijoIzq, hijoDcha) =>
-                    if(nivel == 0) s"id: $id"
-                    else recorrerNivel(hijoIzq, nivel - 1) + recorrerNivel(hijoDcha, nivel - 1)
-                case NodoHoja(id, valor) =>
-                    if(nivel == 0) s"id: $id, valor: $valor"
-                    else ""
+
+            // Si hemos llegado al nivel deseado, devolvemos la inforamción del nodo
+            if (nivel == 0) arbol.informacionNodo + " | "
+
+            // Si no hemos llegado al nivel Comprobamos el tipo de nodo
+            else arbol match {
+
+                // Si es un nodo interno, llamamos a la función recursiva para los hijos izquierdo y derecho
+                // respectivamente, decrementando el nivel
+                case NodoInterno(id, hijoIzq, hijoDcha) => recorrerNivel(hijoIzq, nivel - 1) + recorrerNivel(hijoDcha, nivel - 1)
+
+                // En otro caso, devolvemos la cadena vacía
+                case _ => ""
             }
         }
 
+        // Función tail recursive que permite obtener la información de un árbol, recorriendolo en anchura,
+        // desde el nicel indicado, hasta la profundidad indicada
         @annotation.tailrec
         def go(arbol: ArbolBinario[Double], nivel: Int, profundidad: Int, acum: String): String = {
+
+            // Si el nivel es menor que la profundidad, llamamos a esta función, añadiendo al acumulador
+            // el la llamada a recorrerNivel con nivel actual, y aumentando el nivel
             if (nivel < profundidad) go (arbol, nivel+1, profundidad, acum + recorrerNivel(arbol, nivel))
-            else acum + recorrerNivel(arbol, nivel)
+
+            // Si hemos llegado a la profundidad indicada, devolvemos el acumulador
+            else acum
         }
 
+        // Primera llamada a la función go, con el nivel 0, y la profundidad del árbol
         go (arbol, 0, profundidadArbol(arbol), "")
     }
 
+    /**
+     * Función que permite obtener el recorrido en anchura de un árbol, haciendo uso de una cola mutable
+     * @param arbol
+     * @return
+     */
     def recorridoAnchuraUsandoCola(arbol: ArbolBinario[Double]): String = {
+
+        // Declaramos la cola
         val cola = mutable.Queue[ArbolBinario[Double]]()
+
+        // Cadena vacía inicial
         var resultado = ""
 
-        cola.addOne(ArbolBinarioDoubles.arbol)
+        // Añadimos el primer nodo
+        cola.addOne(ArbolBinario.arbol)
 
+        // Mientras la cola no esté vacía
         while(cola.nonEmpty){
+
+            // Sacamos el nodo de la cola
             val nodo = cola.dequeue
-            resultado = resultado.concat(nodo match {
-                case Nil => ""
-                case NodoInterno(id, hijoIzq, hijoDcha) =>
-                    cola.addOne(hijoIzq)
-                    cola.addOne(hijoDcha)
-                    s"id: $id"
-                case NodoHoja(id, valor) => s"id: $id, valor: $valor"
-            })
+
+            // Concatenamos a la cadena resultado el valor obtenido al procesar el nodo
+            resultado = resultado.concat(nodo.informacionNodo + " | ")
+
+                // Comprobamos el tipo de nodo
+                nodo match {
+
+                    // Si es un nodo interno, añadimos los hijos a la cola
+                    case NodoInterno(id, hijoIzq, hijoDcha) =>
+                        cola.addOne(hijoIzq)
+                        cola.addOne(hijoDcha)
+
+                    // En otro caso, no hacemos nada
+                    case _ =>
+                }
         }
+        // Devolvemos el resultado
         resultado
     }
 
@@ -154,8 +225,6 @@ object ArbolBinarioDoubles extends App{
     def numeroHojas(arbol: ArbolBinario[Double]): Int = {
         // Comprobamos el tipo de nodo
         arbol match {
-            // Si es nulo, devolvemos 0
-            case Nil => 0
 
             // Si es un Nodo Interno, llamamos a la función con los dos hijos del nodo,
             // y sumamos el resultado
@@ -163,6 +232,9 @@ object ArbolBinarioDoubles extends App{
 
             // Si es un nodo hoja, devolvemos 1
             case NodoHoja(id, valor) => 1
+
+            // En otro caso (nulo), devolvemos 0
+            case _ => 0
         }
     }
 
@@ -174,8 +246,6 @@ object ArbolBinarioDoubles extends App{
     def numeroNodosInternos(arbol: ArbolBinario[Double]): Int = {
         // Comprobamos el tipo de nodo
         arbol match {
-            // Si es nulo, devolvemos 0
-            case Nil => 0
 
             // Si es un Nodo Interno, devolvemos 1, más el resultado de la llamada a esta función para
             // los dos hijos del nodo
@@ -183,6 +253,9 @@ object ArbolBinarioDoubles extends App{
 
             // Si es un nodo Hoja, devolvemos 0
             case NodoHoja(id, valor) => 0
+
+            // En otro caso (nulo), devolvemos 0
+            case _ => 0
         }
     }
 
@@ -197,8 +270,6 @@ object ArbolBinarioDoubles extends App{
     def aplicarFuncionAHojas(arbol: ArbolBinario[Double], neutro: Double)(funcion: (Double, Double) => Double): Double = {
         // Comprobamos el tipo de nodo
         arbol match {
-            // Si es nulo, devolvemos el elemento neutro
-            case Nil => neutro
 
             // Si es un nodo interno, devolvemos el resultado de aplicar la función, con el resultado
             // de la llamada a esta función para los dos hijos del nodo
@@ -207,6 +278,9 @@ object ArbolBinarioDoubles extends App{
 
             // Si es un nodo hoja, devolvemos el valor que tiene
             case NodoHoja(id, valor) => valor
+
+            // En otro caso (nulo), devolvemos el elemento neutro
+            case _ => neutro
         }
     }
 
@@ -240,8 +314,6 @@ object ArbolBinarioDoubles extends App{
     def profundidadArbol(arbol: ArbolBinario[Double]): Int = {
         // Comprobamos el tipo de nodo
         arbol match {
-            // Si es nulo, devolvemos 0
-            case Nil => 0
 
             // Si es un Nodo Interno, calculamos la profundidad de ambos hijos,
             // y devolvemos la más grande
@@ -258,6 +330,9 @@ object ArbolBinarioDoubles extends App{
 
             // Si es una hoja, se devuelve 1
             case NodoHoja(id, valor) => 1
+
+            // En otro caso (nulo), devolvemos 0
+            case _ => 0
         }
     }
 
@@ -274,11 +349,9 @@ object ArbolBinarioDoubles extends App{
         // modificando los IDs de los nodos para aumentar en 1 la profundidad, y tener en cuenta
         // si van ser hijo izquierdo o derecho de la nueva raíz
         def aumentarProfundidadArbol(arbol: ArbolBinario[Double], idNuevo: String): ArbolBinario[Double] = {
+
             // Se calcula la profundidad del hijo izquierdo (aumentándola en 1 debido al nodo actual)
             arbol match {
-                // Si es nulo, devolvemos Nil (nunca debería darse este caso debido a las comprobaciones previas)
-                case Nil => Nil
-
                 // Si es un nodo interno, se crea un nuevo NodoInterno con el nuevo id, llamando a esta función
                 // para actualzar los IDs de sus dos hijos
                 case NodoInterno(id, hijoIzq, hijoDcha) =>
@@ -287,10 +360,13 @@ object ArbolBinarioDoubles extends App{
 
                 // Si es una hoja, se devuelve un nuevo NodoHoja actualizando el ID
                 case NodoHoja(id, valor) => NodoHoja(idNuevo, valor)
+
+                // En otro caso (nulo), devolvemos Nil (nunca debería darse este caso debido a las comprobaciones previas)
+                case _ => Nil
             }
         }
 
-        // Se comprueba el tipo de árbol al que pertenece el segundo árbol binario
+        // Se comprueba el tipo de árbol al que pertenece el primer árbol binario
         arbol1 match{
             // Si es nulo, se devuelve directamente el segundo árbol
             case Nil => arbol2
@@ -298,7 +374,7 @@ object ArbolBinarioDoubles extends App{
             // En otro caso
             case _ =>
 
-                // Se comprueba el tipo de árbol al que pertenece el primer árbol binario
+                // Se comprueba el tipo de árbol al que pertenece el segundo árbol binario
                 arbol2 match {
 
                     // Si es nulo, se devuelve directamente el primer árbol
@@ -313,14 +389,79 @@ object ArbolBinarioDoubles extends App{
         }
     }
 
-    val arbol = ArbolBinarioDoubles(1.1, 2.2, 3.3, 4.4, 5.5, 6.6)
+    /**
+     * Función recursiva que permite obtener el valor que contiene una determinada hoja de un árbol binario
+     * @param arbol
+     * @param numHoja
+     * @return
+     */
+    def obtenerValorHoja (arbol: ArbolBinario[Double], numHoja: Int): Double = {
 
-    val arbol2 = ArbolBinarioDoubles(1.1, 2.2)
+        // Calculamos el número de hojas del árbol
+        val numHojasArbol = numeroHojas(arbol)
 
+        // Comprobamos que la hoja deseada está en un rango válido
+        val n = {
+            // Si es menor a 0, se devuelve la hoja 0
+            if(numHoja < 0) 0
+
+            // Si es mayor o igual al número total de hojas, se devuelve la últiima
+            else if (numHoja >= numHojasArbol) numHojasArbol-1
+
+            // Si es válida, se devuelve ese número de hoja
+            else numHoja
+        }
+
+        // Función tail recursive que permite devolver el valor de una hoja, buscando en el árbol mediante
+        // una cota inferior y otra superior, que indican las hojas que hay en una parte del árbol
+        @annotation.tailrec
+        def go(arbol: ArbolBinario[Double], cotaInferior: Int, cotaSuperior: Int): Double = {
+
+            // Se comprueba el tipo de nodo
+            arbol match{
+
+                // Si es un nodo interno, comprobamos la rama por la que debemos continuar
+                case NodoInterno(id, hijoIzq, hijoDcha) =>
+                    // Si la hoja a la que queremos llegar es menor o igual al punto medio actual avanzamos por el
+                    // hijo izquierdo, manteniendo la cota inferior, y estableciendo como cota superior el punto medio
+                    if (n <= (cotaInferior + cotaSuperior)/2) go(hijoIzq, cotaInferior, (cotaInferior + cotaSuperior)/2)
+
+                    // Si es mayor al punto medio, avanzamos por el hijo derecho, manteniendo la cota superior,
+                    // y estableciendo como cota inferior el punto medio + 1
+                    else go(hijoDcha, (cotaInferior + cotaSuperior)/2 + 1, cotaSuperior)
+
+                // Si es un nodo hoja, devolvemos el valor
+                case NodoHoja(id, valor) => valor
+
+                // En otro caso (nodo nulo) se devuelve un valor nulo
+                case _ => 0
+            }
+        }
+
+        // Primera llamada a la función go, con la cota Inferior a 0, y la superior al número de hojas -1
+        go(arbol, 0, numHojasArbol-1)
+    }
+
+    val arbol = ArbolBinario(1.1, 2.2, 3.3, 4.4, 5.5, 6.6)
+
+    val arbol2 = ArbolBinario(1,2,3,4,5,6,7,8,9,10,11)
+
+    println(recorridoProfundidadPostorden(arbol))
+    println(recorridoProfundidadPreorden(arbol))
     println(recorridoAnchuraRecursivo(arbol))
     println(recorridoAnchuraUsandoCola(arbol))
+    println(obtenerValorHoja(arbol2, 0))
+    println(obtenerValorHoja(arbol2, 1))
+    println(obtenerValorHoja(arbol2, 2))
+    println(obtenerValorHoja(arbol2, 3))
+    println(obtenerValorHoja(arbol2, 4))
+    println(obtenerValorHoja(arbol2, 5))
+    println(obtenerValorHoja(arbol2, 6))
+    println(obtenerValorHoja(arbol2, 7))
+    println(obtenerValorHoja(arbol2, 8))
+    println(obtenerValorHoja(arbol2, 9))
+    println(obtenerValorHoja(arbol2, 10))
 
-    println(unirDosArboles(arbol, arbol2))
 }
 
 
