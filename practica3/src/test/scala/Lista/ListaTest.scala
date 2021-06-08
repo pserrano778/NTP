@@ -88,7 +88,7 @@ class ListaTest extends AnyFunSuite{
 
     // Prueba 10: Concatenar una lista vacia con vacia
     test("Lista vacia con Lista vacia") {
-        assert(concatenar(listaVacia, listaVacia) === List())
+        assert(concatenar(listaVacia, listaVacia) === Lista())
     }
 
     // Prueba 11: Concatenar dos lista con elementos

@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2360e77e-ce0c-4cb5-941e-e4d752618244" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../practica2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/ArbolBinario/ArbolBinario.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ArbolBinario/ArbolBinario.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/ArbolBinario/ArbolBinarioCheck.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/ArbolBinario/ArbolBinarioCheck.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/ArbolBinario/ArbolBinarioTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/ArbolBinario/ArbolBinarioTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/Lista/ListaTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/Lista/ListaTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinario$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinario$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/classes/ArbolBinario/ArbolBinario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/ArbolBinario/ArbolBinarioCheck$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/ArbolBinario/ArbolBinarioCheck$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/ArbolBinario/ArbolBinarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/ArbolBinario/ArbolBinarioTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.13/test-classes/Lista/ListaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.13/test-classes/Lista/ListaTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/tsp/practica3" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -72,19 +75,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ArbolBinarioTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="practica3" />
       <option name="allowRunningInParallel" value="false" />
@@ -98,62 +88,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArbolBinarioTest.Recorrido en Anchura Recursivo Lista Vacía" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ListaTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="practica3" />
       <option name="allowRunningInParallel" value="false" />
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="ArbolBinario.ArbolBinarioTest" />
-      <option name="testName" value="Recorrido en Anchura Recursivo Lista Vacía" />
+      <option name="testKind" value="Class" />
+      <option name="testClassPath" value="Lista.ListaTest" />
       <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArbolBinarioTest.Recorrido en Anchura Recursivo Lista con cinco elementos" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ListaTest.Lista vacia con Lista vacia" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="practica3" />
       <option name="allowRunningInParallel" value="false" />
       <option name="selectedOptions">
         <list />
       </option>
       <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="ArbolBinario.ArbolBinarioTest" />
-      <option name="testName" value="Recorrido en Anchura Recursivo Lista con cinco elementos" />
+      <option name="testClassPath" value="Lista.ListaTest" />
+      <option name="testName" value="Lista vacia con Lista vacia" />
       <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArbolBinarioTest.Recorrido en Anchura Recursivo Lista con un elemento" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+    <configuration name="ListaTest.Longitud lista vacia" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="practica3" />
       <option name="allowRunningInParallel" value="false" />
       <option name="selectedOptions">
         <list />
       </option>
       <option name="testKind" value="Test name" />
-      <option name="testClassPath" value="ArbolBinario.ArbolBinarioTest" />
-      <option name="testName" value="Recorrido en Anchura Recursivo Lista con un elemento" />
+      <option name="testClassPath" value="Lista.ListaTest" />
+      <option name="testName" value="Longitud lista vacia" />
       <option name="workingDirectory" value="C:\Users\Usuario\Documents\GitHub\NTP\practica3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="ScalaTest.ArbolBinarioTest.Recorrido en Anchura Recursivo Lista con cinco elementos" />
-      <item itemvalue="ScalaTest.ArbolBinarioTest.Recorrido en Anchura Recursivo Lista con un elemento" />
-      <item itemvalue="ScalaTest.ArbolBinarioTest.Recorrido en Anchura Recursivo Lista Vacía" />
-      <item itemvalue="ScalaTest.ArbolBinarioTest" />
       <item itemvalue="Application.ArbolBinarioCheck" />
+      <item itemvalue="ScalaTest.ListaTest" />
+      <item itemvalue="ScalaTest.ListaTest.Longitud lista vacia" />
+      <item itemvalue="ScalaTest.ListaTest.Lista vacia con Lista vacia" />
+      <item itemvalue="ScalaTest.ArbolBinarioTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ArbolBinarioCheck" />
         <item itemvalue="ScalaTest.ArbolBinarioTest" />
-        <item itemvalue="ScalaTest.ArbolBinarioTest.Recorrido en Anchura Recursivo Lista Vacía" />
-        <item itemvalue="ScalaTest.ArbolBinarioTest.Recorrido en Anchura Recursivo Lista con un elemento" />
-        <item itemvalue="ScalaTest.ArbolBinarioTest.Recorrido en Anchura Recursivo Lista con cinco elementos" />
+        <item itemvalue="ScalaTest.ListaTest" />
+        <item itemvalue="ScalaTest.ListaTest.Lista vacia con Lista vacia" />
+        <item itemvalue="ScalaTest.ListaTest.Longitud lista vacia" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +181,10 @@
       <workItem from="1622904765643" duration="2699000" />
       <workItem from="1622917106990" duration="13580000" />
       <workItem from="1622973666414" duration="19189000" />
+      <workItem from="1623059398243" duration="7064000" />
+      <workItem from="1623068931945" duration="207000" />
+      <workItem from="1623069183364" duration="66000" />
+      <workItem from="1623164586719" duration="595000" />
     </task>
     <servers />
   </component>

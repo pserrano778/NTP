@@ -63,7 +63,7 @@ object ArbolBinarioCheck extends Properties("Prueba de Árboles Binarios"){
             // Se realiza una búsqueda de todos los elementos del arbol
             for(i <- 0 until elementos.length ) {
                 // Si en algún momento no es correcto
-                if(!(obtenerValorHoja(arbolBinario, i) == elementos(i))) valido = false;
+                if(!(obtenerValorHojaDouble(arbolBinario, i) == elementos(i))) valido = false;
             }
             valido
         }}
@@ -104,8 +104,9 @@ object ArbolBinarioCheck extends Properties("Prueba de Árboles Binarios"){
 
                 // Se realiza una búsqueda de todos los elementos del arbol
                 for(i <- 0 until elementosConcatenados.length ) {
+
                     // Si en algún momento no es correcto
-                    if(!(obtenerValorHoja(arbolBinarioConcatenado, i) == elementosConcatenados(i))) valido = false;
+                    if(!(obtenerValorHojaDouble(arbolBinarioConcatenado, i) == elementosConcatenados(i))) valido = false;
                 }
                 valido
             }

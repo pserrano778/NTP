@@ -6,8 +6,6 @@ import ArbolBinario._
 
 class ArbolBinarioTest extends AnyFunSuite{
 
-
-
     // Creamos algunos Árboles para utilizar en los tests
 
     // Arbol binario vacío
