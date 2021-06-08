@@ -6,7 +6,7 @@ import org.scalacheck.{Gen, Properties}
 //Importamos el contenido de ArbolBinario
 import ArbolBinario._
 
-import Utilidades.Utilidaes._
+import Utilidades.Utilidades._
 
 object ArbolBinarioCheck extends Properties("Prueba de Árboles Binarios"){
 

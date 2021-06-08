@@ -251,10 +251,7 @@ object ArbolBinario{
             // los dos hijos del nodo
             case NodoInterno(id, hijoIzq, hijoDcha) => 1 + numeroNodosInternos(hijoIzq) + numeroNodosInternos(hijoDcha)
 
-            // Si es un nodo Hoja, devolvemos 0
-            case NodoHoja(id, valor) => 0
-
-            // En otro caso (nulo), devolvemos 0
+            // En otro caso, devolvemos 0
             case _ => 0
         }
     }

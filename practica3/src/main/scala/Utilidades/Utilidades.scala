@@ -2,7 +2,7 @@ package Utilidades
 
 import scala.math.pow
 
-object Utilidaes{
+object Utilidades{
 
     /**
      * Clase que permite implementar utilidades para utilizar sobre Double
